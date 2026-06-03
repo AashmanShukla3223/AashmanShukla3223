@@ -11,6 +11,8 @@ export type Project = {
   emoji: string;
   /** Optional accent color hex used in the project card border glow */
   accent?: string;
+  /** Hide the Live/View button for this project */
+  hideLive?: boolean;
 };
 
 export const projects: Project[] = [
@@ -51,6 +53,7 @@ export const projects: Project[] = [
     repo: 'https://github.com/AashmanShukla3223/Antigravity-and-OpenCode-CLI-Prompts-and-Skills',
     tech: ['Markdown', 'OpenCode', 'Antigravity', 'GitHub Releases'],
     status: 'live',
+    hideLive: true,
     emoji: '🛰️',
     accent: '#63e6e2',
   },

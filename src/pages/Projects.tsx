@@ -58,21 +58,23 @@ export default function Projects() {
                   ))}
                 </div>
                 <div className="flex gap-2">
-                  <a
-                    href={p.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="osd-button px-4 py-1.5 rounded-lg text-xs font-semibold"
-                  >
-                    {p.status === 'live' ? 'Live →' : 'View →'}
-                  </a>
+                  {!p.hideLive && (
+                    <a
+                      href={p.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="osd-button px-4 py-1.5 rounded-lg text-xs font-semibold"
+                    >
+                      {p.status === 'live' ? 'Live →' : 'View →'}
+                    </a>
+                  )}
                   <a
                     href={p.repo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="glass px-4 py-1.5 rounded-lg text-xs font-semibold text-white/90 hover:text-white"
+                    className={`px-4 py-1.5 rounded-lg text-xs font-semibold ${p.hideLive ? 'osd-button' : 'glass text-white/90 hover:text-white'}`}
                   >
-                    Code
+                    Code {p.hideLive && '→'}
                   </a>
                 </div>
               </div>
