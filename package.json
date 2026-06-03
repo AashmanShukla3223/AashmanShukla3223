@@ -1,0 +1,32 @@
+{
+  "name": "aashman-homepage",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Aashman Shukla — personal homepage. macOS Tahoe glassmorphism × Samsung 2010 OSD accents.",
+  "scripts": {
+    "dev": "vite",
+    "prebuild": "node scripts/generate-version.js",
+    "build": "npm run prebuild && tsc -b && vite build",
+    "preview": "vite preview",
+    "lint": "echo 'no lint configured yet'",
+    "bump:patch": "node scripts/generate-version.js && npm version patch --no-git-tag-version && node scripts/generate-version.js",
+    "bump:minor": "node scripts/generate-version.js && npm version minor --no-git-tag-version && node scripts/generate-version.js"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^6.28.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.0",
+    "vite": "^7.0.0"
+  }
+}
