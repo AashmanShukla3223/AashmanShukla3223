@@ -9,7 +9,7 @@ export default function Now() {
         </div>
         <h1 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">Now</h1>
         <p className="mt-3 text-white/70 text-base">
-          What I'm actively working on right now? Here is the full picture.
+          What I'm actively working on right now? Here's the full picture.
         </p>
       </header>
 
