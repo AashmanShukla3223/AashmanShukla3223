@@ -9,7 +9,7 @@ export default function Writing() {
       <header className="glass-strong rounded-3xl p-8 animate-slide-up">
         <h1 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">Writing</h1>
         <p className="mt-3 text-white/70 text-base">
-          Notes on shipping, tooling, and what I'm thinking about as I build.
+          Technical essays on retro-futurism as archival practice, browser stress testing methodology, Indian broadcast media history, and building with AI-assisted development.
         </p>
       </header>
 

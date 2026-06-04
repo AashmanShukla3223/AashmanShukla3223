@@ -21,7 +21,7 @@ export const projects: Project[] = [
     name: 'Samsung C5000 LCD TV Simulator',
     tagline: 'Period-authentic 2010 Samsung TV in your browser',
     description:
-      'Full simulator of a Samsung BN59 / UE32C5000 LCD TV — DishTV broadcast, USB filesystem, OSD menus, tri-provider AI Picker (Groq + Gemini + OpenRouter), OTA firmware updates, multiple USB profiles. Currently at v1.0.27 (Bronze Tier). 15 channels, real Hindi news content (AajTak + NDTV), period-accurate animations.',
+      'Full simulator of a Samsung BN59 / UE32C5000 LCD TV — 15 channels (12 MP4 archives from 2010–2020 + 2 live HLS streams), AI Channel Picker (Gemini + Groq + DeepSeek R1, RAG-based, 7 modes), three-path firmware OTA (Internet + USB + Broadcast, conflict resolver), virtual USB system (7 profiles, FAT32 filesystem), DishTV EPG, and full OSD dialogs (Picture settings, Sleep Timer, Closed Captions, Retail Mode). Currently at v1.0.27 (Bronze Tier).',
     url: 'https://samsung-lcd-tv.vercel.app',
     repo: 'https://github.com/AashmanShukla3223/Samsung-LCD-TV-Simulator',
     tech: ['HTML', 'JS', 'Tailwind', 'Vercel Functions', 'TF-IDF', 'Tri-AI'],
@@ -35,7 +35,7 @@ export const projects: Project[] = [
     name: 'macOS 26 Tahoe Simulator',
     tagline: 'Apple\'s next-gen desktop, reimagined in the browser',
     description:
-      'React 19 + Vite simulator of macOS 26 Tahoe — glassmorphic windows, dock, traffic-lights, Spotlight. Built with Gemini CLI as the coding partner. Has analytics installed for visit tracking.',
+      'React 19 + Vite simulator of macOS 26 Tahoe — 20+ apps (Calendar, Notes, Mail, Safari, etc.), glassmorphic UI with backdrop-filter blur, file system with drag-and-drop, 52-track audio stress test that pushes browser audio context limits, and full window management (drag, resize, minimize, fullscreen). Built with Gemini CLI as the coding partner.',
     url: 'https://macos-26-tahoe.vercel.app',
     repo: 'https://github.com/AashmanShukla3223/macos-26-tahoe',
     tech: ['React 19', 'Vite', 'Tailwind', 'TypeScript'],
@@ -51,7 +51,7 @@ export const projects: Project[] = [
       'Curated collection of OPENCODE.md and skill files used to ship features in the Samsung simulator. Public reference for anyone using OpenCode CLI / Antigravity as their coding agent. Also serves as the asset CDN for the simulator (GitHub Releases v1.0 → v1.0.7).',
     url: 'https://github.com/AashmanShukla3223/Antigravity-and-OpenCode-CLI-Prompts-and-Skills',
     repo: 'https://github.com/AashmanShukla3223/Antigravity-and-OpenCode-CLI-Prompts-and-Skills',
-    tech: ['Markdown', 'OpenCode', 'Antigravity', 'GitHub Releases'],
+    tech: ['Markdown', 'OpenCode', 'Antigravity', 'GitHub Releases', 'CLI'],
     status: 'live',
     hideLive: true,
     emoji: '🛰️',
