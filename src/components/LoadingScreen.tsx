@@ -20,22 +20,8 @@ const QUOTES = [
   '"AI will not replace you. A person using AI will." — Satya Nadella',
 ];
 
-const SIDE_COLORS = ['#0a1d3a', '#10b981', '#f59e0b', '#ff375f'];
-
-function offset(progress: number, min: number, max: number) {
-  const clamped = Math.max(0, Math.min(1, (progress - min) / (max - min)));
-  return 100 * (1 - clamped);
-}
-
-function lineVariant(idx: number, progress: number): { color: string; dashoff: number; glow: boolean } {
-  const seg = SIDES[idx];
-  if (progress >= seg.max) return { color: SIDE_COLORS[idx], dashoff: 0, glow: false };
-  if (progress <= seg.min) return { color: 'rgba(255,255,255,0.06)', dashoff: 100, glow: false };
-  return {
-    color: SIDE_COLORS[idx],
-    dashoff: offset(progress, seg.min, seg.max),
-    glow: true,
-  };
+function segPct(progress: number, min: number, max: number) {
+  return Math.max(0, Math.min(1, (progress - min) / (max - min)));
 }
 
 export default function LoadingScreen({ onFinish }: { onFinish: () => void }) {
@@ -75,10 +61,15 @@ export default function LoadingScreen({ onFinish }: { onFinish: () => void }) {
 
   const side = SIDES.find((s) => progress < s.max) ?? SIDES[SIDES.length - 1];
 
-  const v0 = lineVariant(0, progress);
-  const v1 = lineVariant(1, progress);
-  const v2 = lineVariant(2, progress);
-  const v3 = lineVariant(3, progress);
+  const topPct = segPct(progress, 0, 25);
+  const rightPct = segPct(progress, 25, 50);
+  const bottomPct = segPct(progress, 50, 75);
+  const leftPct = segPct(progress, 75, 100);
+
+  const topActive = progress < 25;
+  const rightActive = progress >= 25 && progress < 50;
+  const bottomActive = progress >= 50 && progress < 75;
+  const leftActive = progress >= 75 && progress < 100;
 
   return (
     <div
@@ -86,40 +77,54 @@ export default function LoadingScreen({ onFinish }: { onFinish: () => void }) {
         fadeOut ? 'opacity-0' : 'opacity-100'
       }`}
     >
-      <div className="w-72 sm:w-96 flex flex-col items-center gap-8">
+      {/* Top edge — dark blue, left to right */}
+      <div
+        className="fixed top-0 left-0 h-[2.5px] transition-all duration-150 ease-out"
+        style={{
+          width: `${topPct * 100}%`,
+          backgroundColor: '#0a1d3a',
+          boxShadow: topActive ? '0 0 8px #0a1d3a80' : 'none',
+        }}
+      />
+
+      {/* Right edge — emerald green, top to bottom */}
+      <div
+        className="fixed top-0 right-0 w-[2.5px] transition-all duration-150 ease-out"
+        style={{
+          height: `${rightPct * 100}%`,
+          backgroundColor: '#10b981',
+          boxShadow: rightActive ? '0 0 8px #10b98180' : 'none',
+        }}
+      />
+
+      {/* Bottom edge — gold yellow, right to left (anchored at right) */}
+      <div
+        className="fixed bottom-0 right-0 h-[2.5px] transition-all duration-150 ease-out"
+        style={{
+          width: `${bottomPct * 100}%`,
+          backgroundColor: '#f59e0b',
+          boxShadow: bottomActive ? '0 0 8px #f59e0b80' : 'none',
+        }}
+      />
+
+      {/* Left edge — blossom pink, bottom to top (anchored at bottom) */}
+      <div
+        className="fixed bottom-0 left-0 w-[2.5px] transition-all duration-150 ease-out"
+        style={{
+          height: `${leftPct * 100}%`,
+          backgroundColor: '#ff375f',
+          boxShadow: leftActive ? '0 0 8px #ff375f80' : 'none',
+        }}
+      />
+
+      {/* Center content */}
+      <div className="flex flex-col items-center gap-6 w-72 sm:w-96">
         <p
           key={quoteIndex}
           className="text-xs text-white/40 text-center italic leading-relaxed animate-fade-in h-10 flex items-center"
         >
           {shuffled[quoteIndex]}
         </p>
-
-        <svg viewBox="0 0 120 120" width={100} height={100}>
-          {[0, 1, 2, 3].map((i) => {
-            const v = [v0, v1, v2, v3][i];
-            const lines = [
-              { x1: 10, y1: 10, x2: 110, y2: 10 },
-              { x1: 110, y1: 10, x2: 110, y2: 110 },
-              { x1: 110, y1: 110, x2: 10, y2: 110 },
-              { x1: 10, y1: 110, x2: 10, y2: 10 },
-            ][i];
-            return (
-              <g key={i}>
-                <line {...lines} stroke="rgba(255,255,255,0.04)" strokeWidth="2.5" strokeLinecap="round" fill="none" />
-                <line
-                  {...lines}
-                  stroke={v.color}
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  fill="none"
-                  strokeDasharray="100"
-                  strokeDashoffset={v.dashoff}
-                  style={{ filter: v.glow ? `drop-shadow(0 0 4px ${v.color}80)` : 'none', transition: 'stroke-dashoffset 0.15s ease-out' }}
-                />
-              </g>
-            );
-          })}
-        </svg>
 
         <div className="flex justify-between items-center w-full">
           <span className="text-[10px] font-mono text-white/30">{side.label}</span>
