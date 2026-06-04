@@ -20,6 +20,9 @@ const QUOTES = [
   '"AI will not replace you. A person using AI will." — Satya Nadella',
 ];
 
+const BG_GRADIENT = 'linear-gradient(135deg, #0a1d3a 0%, #10b981 33%, #f59e0b 66%, #ff375f 100%)';
+const NAME_GRADIENT = 'linear-gradient(90deg, #0a1d3a, #10b981, #f59e0b, #ff375f)';
+
 function segPct(progress: number, min: number, max: number) {
   return Math.max(0, Math.min(1, (progress - min) / (max - min)));
 }
@@ -73,52 +76,63 @@ export default function LoadingScreen({ onFinish }: { onFinish: () => void }) {
 
   return (
     <div
-      className={`fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#050e1d] transition-opacity duration-400 ${
+      className={`fixed inset-0 z-50 flex flex-col items-center justify-center transition-opacity duration-400 ${
         fadeOut ? 'opacity-0' : 'opacity-100'
       }`}
+      style={{ background: BG_GRADIENT }}
     >
+      {/* Dark overlay for readability */}
+      <div className="fixed inset-0 bg-black/60" />
+
       {/* Top edge — dark blue, left to right */}
       <div
-        className="fixed top-0 left-0 h-[20px] transition-all duration-150 ease-out"
+        className="fixed top-0 left-0 h-[20px] transition-all duration-150 ease-out z-10"
         style={{
           width: `${topPct * 100}%`,
           backgroundColor: '#0a1d3a',
-          boxShadow: topActive ? '0 0 8px #0a1d3a80' : 'none',
+          boxShadow: topActive ? '0 0 12px #0a1d3a' : 'none',
         }}
       />
 
       {/* Right edge — emerald green, top to bottom */}
       <div
-        className="fixed top-0 right-0 w-[20px] transition-all duration-150 ease-out"
+        className="fixed top-0 right-0 w-[20px] transition-all duration-150 ease-out z-10"
         style={{
           height: `${rightPct * 100}%`,
           backgroundColor: '#10b981',
-          boxShadow: rightActive ? '0 0 8px #10b98180' : 'none',
+          boxShadow: rightActive ? '0 0 12px #10b981' : 'none',
         }}
       />
 
-      {/* Bottom edge — gold yellow, right to left (anchored at right) */}
+      {/* Bottom edge — gold yellow, right to left */}
       <div
-        className="fixed bottom-0 right-0 h-[20px] transition-all duration-150 ease-out"
+        className="fixed bottom-0 right-0 h-[20px] transition-all duration-150 ease-out z-10"
         style={{
           width: `${bottomPct * 100}%`,
           backgroundColor: '#f59e0b',
-          boxShadow: bottomActive ? '0 0 8px #f59e0b80' : 'none',
+          boxShadow: bottomActive ? '0 0 12px #f59e0b' : 'none',
         }}
       />
 
-      {/* Left edge — blossom pink, bottom to top (anchored at bottom) */}
+      {/* Left edge — blossom pink, bottom to top */}
       <div
-        className="fixed bottom-0 left-0 w-[20px] transition-all duration-150 ease-out"
+        className="fixed bottom-0 left-0 w-[20px] transition-all duration-150 ease-out z-10"
         style={{
           height: `${leftPct * 100}%`,
           backgroundColor: '#ff375f',
-          boxShadow: leftActive ? '0 0 8px #ff375f80' : 'none',
+          boxShadow: leftActive ? '0 0 12px #ff375f' : 'none',
         }}
       />
 
       {/* Center content */}
-      <div className="flex flex-col items-center gap-6 w-72 sm:w-96">
+      <div className="relative z-10 flex flex-col items-center gap-6 w-72 sm:w-96">
+        <h1
+          className="text-3xl sm:text-4xl font-bold bg-clip-text text-transparent"
+          style={{ backgroundImage: NAME_GRADIENT }}
+        >
+          Aashman Shukla
+        </h1>
+
         <p
           key={quoteIndex}
           className="text-xs text-white/40 text-center italic leading-relaxed animate-fade-in h-10 flex items-center"
