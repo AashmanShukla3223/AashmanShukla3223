@@ -1,11 +1,10 @@
 import { useState, useEffect, useMemo } from 'react';
 
-const BAR_COLORS = [
-  { max: 15, color: '#0a1d3a', label: 'Initializing...' },
-  { max: 30, color: '#0a1d3a', label: 'Connecting...' },
-  { max: 50, color: '#10b981', label: 'Loading assets...' },
-  { max: 75, color: '#f59e0b', label: 'Compiling interface...' },
-  { max: 100, color: '#ff375f', label: 'Almost ready...' },
+const SIDES = [
+  { min: 0, max: 25, color: '#0a1d3a', label: 'Initializing...' },
+  { min: 25, max: 50, color: '#10b981', label: 'Loading...' },
+  { min: 50, max: 75, color: '#f59e0b', label: 'Compiling...' },
+  { min: 75, max: 100, color: '#ff375f', label: 'Almost ready...' },
 ];
 
 const QUOTES = [
@@ -20,6 +19,24 @@ const QUOTES = [
   '"Talk is cheap. Show me the code." — Linus Torvalds',
   '"AI will not replace you. A person using AI will." — Satya Nadella',
 ];
+
+const SIDE_COLORS = ['#0a1d3a', '#10b981', '#f59e0b', '#ff375f'];
+
+function offset(progress: number, min: number, max: number) {
+  const clamped = Math.max(0, Math.min(1, (progress - min) / (max - min)));
+  return 100 * (1 - clamped);
+}
+
+function lineVariant(idx: number, progress: number): { color: string; dashoff: number; glow: boolean } {
+  const seg = SIDES[idx];
+  if (progress >= seg.max) return { color: SIDE_COLORS[idx], dashoff: 0, glow: false };
+  if (progress <= seg.min) return { color: 'rgba(255,255,255,0.06)', dashoff: 100, glow: false };
+  return {
+    color: SIDE_COLORS[idx],
+    dashoff: offset(progress, seg.min, seg.max),
+    glow: true,
+  };
+}
 
 export default function LoadingScreen({ onFinish }: { onFinish: () => void }) {
   const [progress, setProgress] = useState(0);
@@ -40,25 +57,28 @@ export default function LoadingScreen({ onFinish }: { onFinish: () => void }) {
       setProgress((prev) => {
         if (prev >= 100) {
           clearInterval(interval);
-          setTimeout(() => setFadeOut(true), 300);
-          setTimeout(onFinish, 700);
+          setTimeout(() => setFadeOut(true), 400);
+          setTimeout(onFinish, 800);
           return 100;
         }
-        const increment = Math.random() * 2.5 + 0.5;
-        return Math.min(prev + increment, 100);
+        const inc = Math.random() * 2.5 + 0.5;
+        return Math.min(prev + inc, 100);
       });
     }, 60);
     return () => clearInterval(interval);
   }, [onFinish]);
 
   useEffect(() => {
-    const quoteInterval = setInterval(() => {
-      setQuoteIndex((prev) => (prev + 1) % shuffled.length);
-    }, 2200);
-    return () => clearInterval(quoteInterval);
+    const qi = setInterval(() => setQuoteIndex((i) => (i + 1) % shuffled.length), 2200);
+    return () => clearInterval(qi);
   }, [shuffled.length]);
 
-  const entry = BAR_COLORS.find((e) => progress <= e.max) ?? BAR_COLORS[BAR_COLORS.length - 1];
+  const side = SIDES.find((s) => progress < s.max) ?? SIDES[SIDES.length - 1];
+
+  const v0 = lineVariant(0, progress);
+  const v1 = lineVariant(1, progress);
+  const v2 = lineVariant(2, progress);
+  const v3 = lineVariant(3, progress);
 
   return (
     <div
@@ -66,27 +86,45 @@ export default function LoadingScreen({ onFinish }: { onFinish: () => void }) {
         fadeOut ? 'opacity-0' : 'opacity-100'
       }`}
     >
-      <div className="w-72 sm:w-96 space-y-6">
-        <div className="h-1 w-full rounded-full overflow-hidden" style={{ backgroundColor: 'rgba(255,255,255,0.06)' }}>
-          <div
-            className="h-full rounded-full transition-all duration-150 ease-out"
-            style={{
-              width: `${Math.min(progress, 100)}%`,
-              backgroundColor: entry.color,
-              boxShadow: `0 0 8px ${entry.color}60`,
-            }}
-          />
-        </div>
-        <div className="flex justify-between items-center">
-          <span className="text-[10px] font-mono text-white/30">{entry.label}</span>
-          <span className="text-[10px] font-mono text-white/50">{Math.round(progress)}%</span>
-        </div>
+      <div className="w-72 sm:w-96 flex flex-col items-center gap-8">
         <p
           key={quoteIndex}
-          className="text-xs text-white/40 text-center italic leading-relaxed transition-opacity duration-300 animate-fade-in"
+          className="text-xs text-white/40 text-center italic leading-relaxed animate-fade-in h-10 flex items-center"
         >
           {shuffled[quoteIndex]}
         </p>
+
+        <svg viewBox="0 0 120 120" width={100} height={100}>
+          {[0, 1, 2, 3].map((i) => {
+            const v = [v0, v1, v2, v3][i];
+            const lines = [
+              { x1: 10, y1: 10, x2: 110, y2: 10 },
+              { x1: 110, y1: 10, x2: 110, y2: 110 },
+              { x1: 110, y1: 110, x2: 10, y2: 110 },
+              { x1: 10, y1: 110, x2: 10, y2: 10 },
+            ][i];
+            return (
+              <g key={i}>
+                <line {...lines} stroke="rgba(255,255,255,0.04)" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+                <line
+                  {...lines}
+                  stroke={v.color}
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  fill="none"
+                  strokeDasharray="100"
+                  strokeDashoffset={v.dashoff}
+                  style={{ filter: v.glow ? `drop-shadow(0 0 4px ${v.color}80)` : 'none', transition: 'stroke-dashoffset 0.15s ease-out' }}
+                />
+              </g>
+            );
+          })}
+        </svg>
+
+        <div className="flex justify-between items-center w-full">
+          <span className="text-[10px] font-mono text-white/30">{side.label}</span>
+          <span className="text-[10px] font-mono text-white/50">{Math.round(progress)}%</span>
+        </div>
       </div>
     </div>
   );
