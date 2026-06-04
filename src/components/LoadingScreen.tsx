@@ -79,7 +79,7 @@ export default function LoadingScreen({ onFinish }: { onFinish: () => void }) {
     >
       {/* Top edge — dark blue, left to right */}
       <div
-        className="fixed top-0 left-0 h-[8px] transition-all duration-150 ease-out"
+        className="fixed top-0 left-0 h-[20px] transition-all duration-150 ease-out"
         style={{
           width: `${topPct * 100}%`,
           backgroundColor: '#0a1d3a',
@@ -89,7 +89,7 @@ export default function LoadingScreen({ onFinish }: { onFinish: () => void }) {
 
       {/* Right edge — emerald green, top to bottom */}
       <div
-        className="fixed top-0 right-0 w-[8px] transition-all duration-150 ease-out"
+        className="fixed top-0 right-0 w-[20px] transition-all duration-150 ease-out"
         style={{
           height: `${rightPct * 100}%`,
           backgroundColor: '#10b981',
@@ -99,7 +99,7 @@ export default function LoadingScreen({ onFinish }: { onFinish: () => void }) {
 
       {/* Bottom edge — gold yellow, right to left (anchored at right) */}
       <div
-        className="fixed bottom-0 right-0 h-[8px] transition-all duration-150 ease-out"
+        className="fixed bottom-0 right-0 h-[20px] transition-all duration-150 ease-out"
         style={{
           width: `${bottomPct * 100}%`,
           backgroundColor: '#f59e0b',
@@ -109,7 +109,7 @@ export default function LoadingScreen({ onFinish }: { onFinish: () => void }) {
 
       {/* Left edge — blossom pink, bottom to top (anchored at bottom) */}
       <div
-        className="fixed bottom-0 left-0 w-[8px] transition-all duration-150 ease-out"
+        className="fixed bottom-0 left-0 w-[20px] transition-all duration-150 ease-out"
         style={{
           height: `${leftPct * 100}%`,
           backgroundColor: '#ff375f',
