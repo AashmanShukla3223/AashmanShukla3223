@@ -65,6 +65,9 @@ export default function Layout() {
             <span className="text-tahoe-blue">v{typeof __APP_VERSION__ !== 'undefined' ? __APP_VERSION__ : '0.0.0'}</span>
           </span>
         </div>
+        <div className="max-w-5xl mx-auto mt-2 text-center text-[10px] text-white/30 font-mono">
+          Built June 2–9, 2026 in Kanpur, India. Simulating 2010–2011 systems with 2026 technology.
+        </div>
       </footer>
 
       <OTAUpdateBanner />
