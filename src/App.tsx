@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
+import LoadingScreen from './components/LoadingScreen';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Writing from './pages/Writing';
@@ -9,6 +11,12 @@ import Stress from './pages/Stress';
 import NotFound from './pages/NotFound';
 
 export default function App() {
+  const [loading, setLoading] = useState(true);
+
+  if (loading) {
+    return <LoadingScreen onFinish={() => setLoading(false)} />;
+  }
+
   return (
     <div className="app-backdrop">
       <Routes>
