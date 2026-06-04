@@ -12,7 +12,7 @@ export default function Home() {
       <section className="glass-strong rounded-3xl p-8 sm:p-12 animate-slide-up">
         <div className="flex items-center gap-2 mb-6">
           <span className="osd-button text-[10px] uppercase tracking-widest font-bold px-2.5 py-1 rounded-md font-mono">
-            ON AIR · 1.0.27.5
+            ON AIR · v1.0.27.5
           </span>
           <span className="text-white/40 text-xs font-mono">Kanpur, India · UTC+5:30</span>
         </div>
