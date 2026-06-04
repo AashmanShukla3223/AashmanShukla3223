@@ -21,7 +21,7 @@ export default function Layout() {
               <span className="traffic-light tl-yellow"></span>
               <span className="traffic-light tl-green"></span>
             </span>
-            <span className="text-sm font-semibold tracking-tight text-white/90 group-hover:text-white">
+            <span className="text-sm font-semibold tracking-tight text-gradient-four">
               Aashman Shukla
             </span>
           </Link>

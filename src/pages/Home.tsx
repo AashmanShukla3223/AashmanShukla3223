@@ -18,7 +18,7 @@ export default function Home() {
         </div>
 
         <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-white leading-[1.05]">
-          <span className="bg-gradient-to-r from-tahoe-blue via-tahoe-indigo to-tahoe-mint bg-clip-text text-transparent">
+          <span className="text-gradient-four">
             Aashman Shukla
           </span>
           <span className="text-white/40"> — Digital Archaeologist</span>
