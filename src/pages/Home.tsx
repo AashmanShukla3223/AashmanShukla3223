@@ -12,7 +12,7 @@ export default function Home() {
       <section className="glass-strong rounded-3xl p-8 sm:p-12 animate-slide-up">
         <div className="flex items-center gap-2 mb-6">
           <span className="osd-button text-[10px] uppercase tracking-widest font-bold px-2.5 py-1 rounded-md font-mono">
-            ON AIR · 1.0.27
+            ON AIR · 1.0.31
           </span>
           <span className="text-white/40 text-xs font-mono">Kanpur, India · UTC+5:30</span>
         </div>
@@ -94,7 +94,7 @@ export default function Home() {
             <span className="text-2xl block mb-2">🖥️</span>
             <h3 className="font-bold text-white text-sm">macOS 26 Tahoe</h3>
             <p className="text-xs text-white/60 mt-1 leading-relaxed">
-              Love letter to 2011 macOS aesthetics, built with 2026 tech. React 19 glassmorphism, 20+ apps, window management, file system with drag-and-drop.
+              A macOS Built with 2026 tech and futuristic design like Liquid Glass released by Apple at WWDC 2025. React 19 glassmorphism, 20+ apps, window management, file system with drag-and-drop.
             </p>
             <a
               href="https://macos-26-tahoe.vercel.app"
@@ -134,7 +134,7 @@ export default function Home() {
               <li>DishTV OSD — 2001–2016 broadcast UI language</li>
               <li>CRT scanlines — visual artifact from analog era</li>
               <li>macOS Lion design language — pre-Monterey, pre-Neumorphism</li>
-              <li>AajTak archives — 2001–2020 Indian news broadcasts</li>
+              <li>AajTak archives — 2014–2026 Indian news broadcasts</li>
             </ul>
           </div>
           <div>

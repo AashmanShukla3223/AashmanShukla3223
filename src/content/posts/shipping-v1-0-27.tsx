@@ -1,12 +1,12 @@
 export default function ShippingV1_0_27() {
   return (
     <article className="prose-aashman">
-      <h1>Shipping v1.0.27: 8 features in one weekend</h1>
-      <p className="text-white/50 text-sm">June 3, 2026 · 4 min read</p>
+      <h1>Shipping v1.0.31: Shipping 30+ New Features and 10+ New Channels in One Week</h1>
+      <p className="text-white/50 text-sm">June 5, 2026 · 4 min read</p>
 
       <p>
-        v1.0.27 of the <a href="https://samsung-lcd-tv.vercel.app">Samsung C5000 Simulator</a> shipped
-        last night with 8 features across 6 categories — the Bronze Tier. It's also the first release
+        v1.0.31 of the <a href="https://samsung-lcd-tv.vercel.app">Samsung C5000 Simulator</a> shipped
+        last night with 30+ New features combined all the way to v1.0.25 and 10+ New Channels in One Week. It's also the first release
         where I made an architectural decision worth writing about: how to fix the AI Picker's
         position-bias bug without changing the underlying race-mode pipeline.
       </p>
@@ -53,15 +53,15 @@ export default function ShippingV1_0_27() {
         all. Everything lives in the client-side corpus. Server endpoint untouched.
       </p>
 
-      <h2>The other 7 features</h2>
+      <h2>The other features are:</h2>
       <ul>
-        <li>Closed Captions menu (vestigial — period-authentic 2010 TVs always had this UI)</li>
-        <li>AI Picker usage stats (last 10 picks, persisted to localStorage)</li>
-        <li>WII_SAVES_USB profile (easter egg with Mario Kart Wii save data)</li>
-        <li>.thumbnails/ auto-gen in image directories</li>
-        <li>Picture-in-Picture mode (Alt+P, 3 sizes)</li>
-        <li>Sleep Timer with T-60s cancel window</li>
-        <li>Channel memory per input source</li>
+        <li>Added 6 New LIVE Channels</li>
+        <li>Full Overhauled EPG Guide with Info added</li>
+        <li>Added Kids and Entertainment Category</li>
+        <li>Moved watermark DishTV to the right</li>
+        <li>Moved AI Picker Shortcut to Alt+I)</li>
+        <li>4 Day Block consisting of time at the top</li>
+        <li>Added 24 hour Real Time and Channel Overlay</li>
       </ul>
 
       <hr />

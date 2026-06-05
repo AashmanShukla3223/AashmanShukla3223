@@ -8,11 +8,11 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
-    slug: 'shipping-v1-0-27',
-    title: 'Shipping v1.0.27: 8 features in one weekend',
+    slug: 'shipping-v1-0-31',
+    title: 'Shipping v1.0.31: 30+ Features and 10+ Channels in One Week',
     date: '2026-06-03',
     excerpt:
-      'How the Bronze Tier release came together — Closed Captions, AI usage stats, WII_SAVES_USB easter egg, PiP, Sleep Timer, channel memory per source, and an architectural fix for AI Picker channel disambiguation.',
+      'How the v1.0.31 release came together — 6 New LIVE Channels, 12 New MP4s, Channel Overlay, Bug Fixes and Version Synchorization.',
     tags: ['samsung-c5000', 'release-notes', 'opencode'],
   },
   {

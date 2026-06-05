@@ -13,14 +13,14 @@ Preserving systems from 2010–2011 (the boundary between broadcast and streamin
 **Repo:** https://github.com/AashmanShukla3223/Samsung-LCD-TV-Simulator
 
 The exact 2010 hardware that defined an era. Full-featured DishTV DTH emulation with:
-- **15 channels** (12 MP4 archives from 2010–2020 + 2 live HLS streams)
+- **32 channels** (News 121–142, Kids 221–228, Entertainment 321–322 with live HLS + MP4 archives)
 - **AI Channel Picker** (Gemini + Groq + DeepSeek R1, RAG-based, 7 modes)
 - **Three-path firmware OTA** (Internet + USB + Broadcast, conflict resolver)
 - **Virtual USB system** (7 profiles, FAT32 filesystem, localStorage persistence)
-- **DishTV EPG/Guide** (full Electronic Programme Guide, v1.0.30 incoming)
+- **DishTV EPG/Guide** (full Electronic Programme Guide with 4 daypart blocks: Late Night, Morning, Mid Morning, LIVE)
 - **Full OSD dialogs** (Picture settings, Sleep Timer, Closed Captions, Retail Mode, etc.)
 
-**Current version:** v1.0.27.5 (HDMI 4 recursive embedding — macOS Tahoe loads inside TV as iframe)  
+**Current version:** v1.0.31 (22 News + 8 Kids + 2 Entertainment LIVE channels, full EPG with daypart navigation)  
 **Stress tested:** 2-level recursion confirmed on 4 GB ChromeOS (see STRESS.md)
 
 ---
@@ -29,7 +29,7 @@ The exact 2010 hardware that defined an era. Full-featured DishTV DTH emulation 
 **Live:** https://aashman-homepage.vercel.app (embedded on homepage)  
 **Separate deploy:** macos-26-tahoe.vercel.app (planned)
 
-A love letter to 2011 macOS aesthetics, built with 2026 tech. React 19 + Vite + Tailwind glassmorphism:
+A 2026 aesthetics plus tech OS. React 19 + Vite + Tailwind glassmorphism:
 - **20+ apps** in the dock (Calendar, Notes, Mail, Safari, etc.)
 - **Glassmorphic UI** (backdrop-filter blur, frosted glass aesthetic)
 - **File system** with drag-and-drop (functional filesystem via localStorage)
@@ -63,7 +63,7 @@ Technical essays on:
 
 #### **Now**
 Living status page (nownownow.com style):
-- Current projects (v1.0.28, v1.0.29, v1.0.30 roadmap)
+- Current projects (v1.0.31 shipped: 33 channels across News/Kids/Entertainment)
 - Learning (browser internals, broadcast systems, archival methodology)
 - Stressing (2-level recursion limits, swap thrashing at level 3)
 
@@ -123,7 +123,7 @@ Two simulators embedded recursively create measurable load that scales linearly 
 
 ### What You Built in One Week
 ```
-June 2–9, 2026:
+June 1–5, 2026:
 ├── Samsung C5000 (v1.0.27.1, production-ready)
 ├── macOS 26 Tahoe (React 19, full feature set)
 ├── aashman-homepage (portfolio + documentation)
@@ -180,14 +180,17 @@ June 2–9, 2026:
 ### v1.0.29 (Samsung TV)
 - 2x Peppa Pig episodes (Hindi dubbed)
 - 2x Paw Patrol episodes (Indian version)
-- Kids mode (channel filter by age rating)
 
-### v1.0.30 (Samsung TV) — **The Capstone**
-- Full DishTV Programme Guide (140+ channels, 30-day schedule)
+### v1.0.30 (Samsung TV) 
+- Full DishTV Programme Guide (28 channels, 30-day schedule)
 - 2x Chikoo Aur Bunty (Hindi original kids show)
 - 2x Motu Paltu (Hindi comedy)
 - Show metadata, ratings, synopsis
 - Recording scheduler
+
+### v1.0.31 (Samsung TV) - **The Capstone - Current**
+- Full DishTV Programme Guide (33 Channels, 30-Day Schedule)
+- 3 LIVE Channels added
 
 ### Homepage (Ongoing)
 - Writing essays (broadcast history, archival methodology)
@@ -243,14 +246,16 @@ The code itself is the artifact. Vercel is the museum. GitHub is the archive. Br
 
 ## 📜 Changelog
 
-- **2026-06-09** — v1.0.27.5 ships with HDMI 4 recursive embedding. **This is when the stress test methodology was born.** HDMI 4 input loads macOS Tahoe as iframe; macOS can embed Samsung TV back, enabling infinite recursion. Recursive stress testing becomes possible.
+- **2026-06-05 (v1.0.31)** — News LIVE expansion: India TV (141) + Republic Bharat (142). Entertainment tier added: 9XM Live (321) + Sony Kal HD LIVE (322). Total channels: 32 across 3 tiers (News, Kids, Entertainment). Full EPG with 4 daypart blocks live.
+- **2026-06-04** — v1.0.27.5 ships with HDMI 4 recursive embedding. **This is when the stress test methodology was born.** HDMI 4 input loads macOS Tahoe as iframe; macOS can embed Samsung TV back, enabling infinite recursion. Recursive stress testing becomes possible.
 - **2026-06-04** — Initial v1.0.27.0 published. Samsung sim, macOS Tahoe, homepage all live. STRESS.md methodology documented. Recursion tested: 2 levels stable on 4 GB ChromeOS (swap thrashing at level 3).
 
 ---
 
 ## 📜 Colophon
 
-**Built:** June 2–9, 2026  
+**Built:** June 1–5, 2026  
+**Last updated:** June 5, 2026 (v1.0.31 live)  
 **Location:** Kanpur, India  
 **Tools:** Claude + OpenCode, Vercel, GitHub, React 19, TypeScript  
 **Deployed:** https://aashman-homepage.vercel.app
