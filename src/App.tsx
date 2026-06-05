@@ -8,6 +8,7 @@ import Writing from './pages/Writing';
 import Post from './pages/Post';
 import Now from './pages/Now';
 import Stress from './pages/Stress';
+import Credits from './pages/Credits';
 import NotFound from './pages/NotFound';
 
 export default function App() {
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="/writing/:slug" element={<Post />} />
           <Route path="/now" element={<Now />} />
           <Route path="/stress" element={<Stress />} />
+          <Route path="/credits" element={<Credits />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

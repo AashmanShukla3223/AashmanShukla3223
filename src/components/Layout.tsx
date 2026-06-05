@@ -7,6 +7,7 @@ const navItems = [
   { to: '/writing', label: 'Writing' },
   { to: '/now', label: 'Now' },
   { to: '/stress', label: 'Stress' },
+  { to: '/credits', label: 'Credits' },
 ];
 
 export default function Layout() {
