@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { projects } from '../data/projects';
 import { posts } from '../data/posts';
+import { useOTAUpdate } from '../hooks/useOTAUpdate';
 
 export default function Home() {
   const featured = projects.find((p) => p.highlight);
@@ -333,6 +334,9 @@ export default function Home() {
         </section>
       )}
 
+      {/* ─── Check for Updates ─── */}
+      <CheckForUpdates />
+
       {/* ─── Philosophy: Archival as Code ─── */}
       <section
         className="glass rounded-2xl p-6 sm:p-8 animate-slide-up"
@@ -358,5 +362,54 @@ export default function Home() {
         </p>
       </section>
     </div>
+  );
+}
+
+function CheckForUpdates() {
+  const { current, latest, available, loading, buildTime, check } = useOTAUpdate();
+
+  return (
+    <section className="glass rounded-2xl p-6 sm:p-8 animate-slide-up" style={{ animationDelay: '0.32s' }}>
+      <div className="flex items-center gap-2 mb-4">
+        <svg className="w-5 h-5 text-tahoe-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span className="text-[10px] uppercase tracking-widest font-bold text-tahoe-blue">
+          Check for Updates
+        </span>
+      </div>
+
+      <div className="flex items-center justify-between gap-4 flex-wrap">
+        <div className="text-sm text-white/70">
+          <span className="font-mono text-white/50">Current: </span>
+          <span className="font-mono text-white font-semibold">v{current}</span>
+          {buildTime && (
+            <span className="text-white/30 ml-2 text-xs font-mono">
+              · built {new Date(buildTime).toLocaleDateString()}
+            </span>
+          )}
+          {latest && latest !== current && (
+            <div className="mt-1">
+              <span className="font-mono text-emerald-400 text-xs">
+                Update available: v{latest}
+              </span>
+            </div>
+          )}
+        </div>
+
+        <button
+          onClick={check}
+          disabled={loading}
+          className="px-4 py-2 rounded-xl text-xs font-semibold transition-all disabled:opacity-50"
+          style={{
+            background: '#ff375f',
+            color: '#fff',
+            boxShadow: '0 0 12px rgba(255, 55, 95, 0.4)',
+          }}
+        >
+          {loading ? 'Checking…' : 'Check for Updates'}
+        </button>
+      </div>
+    </section>
   );
 }
