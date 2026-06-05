@@ -14,24 +14,23 @@ export default function Now() {
       </header>
 
       <section className="glass rounded-2xl p-6 sm:p-8 animate-slide-up" style={{ animationDelay: '0.1s' }}>
-        <h2 className="text-lg font-bold text-white mb-3">📺 Samsung C5000 Simulator</h2>
+        <h2 className="text-lg font-bold text-white mb-3">📺 Samsung C5000 Simulator — v1.0.31 (Capstone)</h2>
         <ul className="space-y-2 text-sm text-white/70">
           <li>
             <span className="text-emerald-400 font-mono text-xs mr-2">SHIPPED</span>
-            v1.0.27 Bronze Tier (8 features + AI Picker disambiguation fix)
+            Full DishTV Programme Guide — 33 channels across News/Kids/Entertainment with 30-day schedule, 4 daypart blocks (Late Night, Morning, Mid Morning, LIVE)
           </li>
           <li>
-            <span className="text-tahoe-orange font-mono text-xs mr-2">NEXT</span>
-            v1.0.28 — 3 new AajTak MP4s + India Today HLS stream (downloading the segments now via{' '}
-            <code className="text-tahoe-mint">yt-dlp --download-sections</code> on Windows in parallel)
+            <span className="text-emerald-400 font-mono text-xs mr-2">SHIPPED</span>
+            3 LIVE channels added: India TV (141), Republic Bharat (142), 9XM Live (321), Sony Kal HD LIVE (322)
           </li>
           <li>
-            <span className="text-white/40 font-mono text-xs mr-2">QUEUED</span>
-            v1.0.29 — Kids imports (2× Peppa Pig + 2× Paw Patrol Hindi dubs)
+            <span className="text-emerald-400 font-mono text-xs mr-2">SHIPPED</span>
+            Entertainment tier (321–322) with live HLS streams alongside News (121–142) and Kids (221–228)
           </li>
           <li>
-            <span className="text-white/40 font-mono text-xs mr-2">QUEUED</span>
-            v1.0.30 — Full DishTV EPG (140+ channels), kids Indian originals (Chikoo Aur Bunty + Motu Patlu), recording scheduler
+            <span className="text-white/40 font-mono text-xs mr-2">NEXT</span>
+            Community submissions: stress test results, archive contributions, simulator extensions
           </li>
         </ul>
       </section>
@@ -70,16 +69,20 @@ export default function Now() {
         <h2 className="text-lg font-bold text-white mb-3">📚 Learning</h2>
         <ul className="space-y-2 text-sm text-white/70">
           <li>
-            <span className="text-tahoe-mint font-mono text-xs mr-2">BROWSER</span>
-            How V8 GC heuristics change across Chrome versions — GC improvements every ~6 versions meaningfully affect recursion ceilings
+            <span className="text-tahoe-mint font-mono text-xs mr-2">ARCHIVAL</span>
+            Retro-futurism as archival practice — preserving the 2010–2011 broadcast-to-streaming transition with code
+          </li>
+          <li>
+            <span className="text-tahoe-mint font-mono text-xs mr-2">STRESS</span>
+            Browser stress testing methodology — novel approach using recursive iframe embedding as real-world benchmark
           </li>
           <li>
             <span className="text-tahoe-mint font-mono text-xs mr-2">BROADCAST</span>
-            Indian DTH expansion history (DishTV, Airtel, Tata Sky competitive era) and HLS as modern broadcast protocol
+            Indian broadcast media history — AajTak archives, DishTV evolution, DTH expansion competitive era
           </li>
           <li>
-            <span className="text-tahoe-mint font-mono text-xs mr-2">ARCHIVAL</span>
-            Retro-futurism as archival methodology — preserving the 2010–2011 broadcast-to-streaming transition with code
+            <span className="text-tahoe-mint font-mono text-xs mr-2">AI</span>
+            Building with AI-assisted development — OpenCode + Claude as engineering multiplier (24× speed)
           </li>
           <li>
             <span className="text-tahoe-mint font-mono text-xs mr-2">LLMs</span>

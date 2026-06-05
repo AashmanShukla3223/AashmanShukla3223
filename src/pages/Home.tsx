@@ -12,7 +12,7 @@ export default function Home() {
       <section className="glass-strong rounded-3xl p-8 sm:p-12 animate-slide-up">
         <div className="flex items-center gap-2 mb-6">
           <span className="osd-button text-[10px] uppercase tracking-widest font-bold px-2.5 py-1 rounded-md font-mono">
-            ON AIR · v1.0.27.5
+            ON AIR · 1.0.27
           </span>
           <span className="text-white/40 text-xs font-mono">Kanpur, India · UTC+5:30</span>
         </div>
@@ -79,7 +79,7 @@ export default function Home() {
             <span className="text-2xl block mb-2">📺</span>
             <h3 className="font-bold text-white text-sm">Samsung C5000</h3>
             <p className="text-xs text-white/60 mt-1 leading-relaxed">
-              The exact 2010 hardware that defined an era. DishTV DTH with 15 channels, AI Channel Picker (Gemini + Groq + DeepSeek R1), three-path OTA, virtual USB.
+              The exact 2010 hardware that defined an era. 32 channels (News 121–142, Kids 221–228, Entertainment 321–322) with live HLS + MP4 archives, AI Channel Picker (Gemini + Groq + DeepSeek R1, RAG-based, 7 modes), three-path firmware OTA (Internet + USB + Broadcast), virtual USB (7 profiles, FAT32), and full DishTV EPG with 4 daypart blocks.
             </p>
             <a
               href="https://samsung-lcd-tv.vercel.app"
@@ -206,12 +206,12 @@ export default function Home() {
       >
         <div className="flex items-center gap-2 mb-3">
           <span className="text-[10px] uppercase tracking-widest font-bold text-tahoe-mint">
-            Development Speed: 24× faster
+            Development Speed: 1 Week (2026) vs 6 Months (2011)
           </span>
         </div>
         <div className="grid gap-4 sm:grid-cols-2">
           <div className="bg-emerald-400/5 rounded-xl p-4 border border-emerald-400/20">
-            <h3 className="text-sm font-bold text-emerald-400 mb-2">June 2–9, 2026 (1 week)</h3>
+            <h3 className="text-sm font-bold text-emerald-400 mb-2">June 1–5, 2026 (1 week)</h3>
             <ul className="space-y-1 text-xs text-white/60 font-mono">
               <li>├── Samsung C5000 (v1.0.27.1, production-ready)</li>
               <li>├── macOS 26 Tahoe (React 19, full feature set)</li>
@@ -248,7 +248,7 @@ export default function Home() {
           </span>
         </div>
         <div className="flex flex-wrap gap-2">
-          {['React 19', 'TypeScript', 'Tailwind CSS', 'Vite', 'Vercel Edge', 'HLS', 'H.264', 'Gemini', 'Groq', 'DeepSeek R1', 'Claude + OpenCode', 'GitHub Releases CDN'].map((t) => (
+          {['React 19', 'TypeScript', 'Tailwind CSS', 'Vite', 'Vercel Edge', 'HLS', 'H.264', 'Gemini', 'Groq', 'DeepSeek R1', 'RAG', 'Virtual Filesystem', 'OTA Updates', 'Claude + OpenCode', 'GitHub Releases CDN'].map((t) => (
             <span
               key={t}
               className="px-2.5 py-1 rounded-md text-[10px] font-mono text-white/60 bg-white/5 border border-white/10"
