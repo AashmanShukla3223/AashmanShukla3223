@@ -1,5 +1,6 @@
 import { Outlet, NavLink, Link } from 'react-router-dom';
 import OTAUpdateBanner from './OTAUpdateBanner';
+import PageTransition from './PageTransition';
 
 const navItems = [
   { to: '/', label: 'Home', end: true },
@@ -50,8 +51,10 @@ export default function Layout() {
       </header>
 
       {/* ─── Main content area ─── */}
-      <main className="flex-1 px-4 sm:px-6 py-8 sm:py-12 animate-fade-in">
-        <Outlet />
+      <main className="flex-1 px-4 sm:px-6 py-8 sm:py-12">
+        <PageTransition>
+          <Outlet />
+        </PageTransition>
       </main>
 
       {/* ─── Footer ─── */}

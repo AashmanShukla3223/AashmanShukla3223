@@ -14,6 +14,7 @@
     "bump:minor": "node scripts/generate-version.js && npm version minor --no-git-tag-version && node scripts/generate-version.js"
   },
   "dependencies": {
+    "framer-motion": "^12.40.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^6.28.0"

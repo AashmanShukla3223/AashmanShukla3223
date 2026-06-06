@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 import Layout from './components/Layout';
 import LoadingScreen from './components/LoadingScreen';
 import Home from './pages/Home';
@@ -13,6 +14,7 @@ import NotFound from './pages/NotFound';
 
 export default function App() {
   const [loading, setLoading] = useState(true);
+  const location = useLocation();
 
   if (loading) {
     return <LoadingScreen onFinish={() => setLoading(false)} />;
@@ -20,18 +22,20 @@ export default function App() {
 
   return (
     <div className="app-backdrop">
-      <Routes>
-        <Route element={<Layout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/writing" element={<Writing />} />
-          <Route path="/writing/:slug" element={<Post />} />
-          <Route path="/now" element={<Now />} />
-          <Route path="/stress" element={<Stress />} />
-          <Route path="/credits" element={<Credits />} />
-          <Route path="*" element={<NotFound />} />
-        </Route>
-      </Routes>
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route element={<Layout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/writing" element={<Writing />} />
+            <Route path="/writing/:slug" element={<Post />} />
+            <Route path="/now" element={<Now />} />
+            <Route path="/stress" element={<Stress />} />
+            <Route path="/credits" element={<Credits />} />
+            <Route path="*" element={<NotFound />} />
+          </Route>
+        </Routes>
+      </AnimatePresence>
     </div>
   );
 }
