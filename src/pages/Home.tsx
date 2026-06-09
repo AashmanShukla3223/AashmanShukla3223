@@ -75,7 +75,7 @@ export default function Home() {
             Three Websites, One Vision
           </span>
         </div>
-        <div className="grid gap-4 sm:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-4">
           <div className="bg-white/5 rounded-xl p-4 border border-white/10 hover:border-tahoe-blue/40 transition-colors">
             <span className="text-2xl block mb-2">📺</span>
             <h3 className="font-bold text-white text-sm">Samsung C5000</h3>
@@ -104,6 +104,21 @@ export default function Home() {
               className="text-tahoe-blue text-xs mt-2 inline-block hover:underline font-mono"
             >
               macos-26-tahoe.vercel.app →
+            </a>
+          </div>
+          <div className="bg-white/5 rounded-xl p-4 border border-white/10 hover:border-tahoe-orange/40 transition-colors">
+            <span className="text-2xl block mb-2">🌉</span>
+            <h3 className="font-bold text-white text-sm">macOS 27 Golden Gate</h3>
+            <p className="text-xs text-white/60 mt-1 leading-relaxed">
+              Apple's latest macOS announced at WWDC 2026. Siri AI with conversational assistant and dedicated app, Apple Intelligence 2.0, Visual Intelligence, Liquid Glass with adjustable opacity, unified toolbars, edge-to-edge sidebars, and major performance improvements. Apple Silicon only.
+            </p>
+            <a
+              href="https://macos-27-golden-gate.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-tahoe-blue text-xs mt-2 inline-block hover:underline font-mono"
+            >
+              macos-27-golden-gate.vercel.app →
             </a>
           </div>
           <div className="bg-white/5 rounded-xl p-4 border border-white/10 hover:border-tahoe-mint/40 transition-colors">

@@ -44,6 +44,19 @@ export const projects: Project[] = [
     accent: '#5e5ce6',
   },
   {
+    id: 'macos-golden-gate',
+    name: 'macOS 27 Golden Gate Simulator',
+    tagline: 'Apple\'s latest macOS, now in your browser',
+    description:
+      'Browser-based simulator of macOS 27 Golden Gate — announced at WWDC 2026 on June 8. Features Siri AI with conversational interface and dedicated Siri app, Apple Intelligence 2.0, Visual Intelligence for on-screen content awareness, Liquid Glass design with adjustable opacity, unified toolbars and edge-to-edge sidebars, and comprehensive performance improvements under the hood. Apple Silicon only. Built with the same React 19 + Vite + Tailwind stack as macOS Tahoe, continuing the series of browser-native macOS simulators.',
+    url: 'https://macos-27-golden-gate.vercel.app',
+    repo: 'https://github.com/AashmanShukla3223/Antigravity-and-OpenCode-CLI-Prompts-and-Skills',
+    tech: ['React 19', 'Vite', 'Tailwind', 'TypeScript', 'Siri AI', 'Apple Intelligence 2.0', 'Liquid Glass'],
+    status: 'live',
+    emoji: '🌉',
+    accent: '#ff9f0a',
+  },
+  {
     id: 'antigravity-prompts',
     name: 'Antigravity & OpenCode Prompts',
     tagline: 'CLI prompts and skills library for AI coding agents',
