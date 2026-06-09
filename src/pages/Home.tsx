@@ -26,7 +26,7 @@ export default function Home() {
         </h1>
 
         <p className="mt-4 text-lg text-white/80 font-semibold">
-          18 years old. Kanpur, India. Builder of period-authentic simulators.
+          12 years old. Kanpur, India. Builder of period-authentic simulators.
         </p>
 
         <p className="mt-4 text-base text-white/70 leading-relaxed max-w-3xl">
