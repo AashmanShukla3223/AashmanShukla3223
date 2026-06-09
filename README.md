@@ -105,7 +105,7 @@ Workflow:    OpenCode CLI · Gemini CLI · Antigravity (incoming)
 
 ## 🌐 Connect
 
-- 🌐 **Live work**: [samsung-lcd-tv.vercel.app](https://samsung-lcd-tv.vercel.app) · [macos-26-tahoe.vercel.app](https://macos-26-tahoe.vercel.app) · [macos-27-golden-gate.vercel.app](https://macos-27-golden-gate.vercel.app)
+- 🌐 **Live work**: [samsung-lcd-tv.vercel.app](https://samsung-lcd-tv.vercel.app) · [macos-27-golden-gate.vercel.app](https://macos-27-golden-gate.vercel.app)
 - 🐦 **Twitter / X**: [@AashamnS49638](https://twitter.com/AashamnS49638)
 
 ---
