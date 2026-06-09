@@ -1,7 +1,7 @@
 {
   "name": "aashman-homepage",
   "private": true,
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "module",
   "description": "Aashman Shukla — personal homepage. macOS Tahoe glassmorphism × Samsung 2010 OSD accents.",
   "scripts": {
