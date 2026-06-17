@@ -75,7 +75,7 @@ export default function Home() {
             Three Websites, One Vision
           </span>
         </div>
-        <div className="grid gap-4 sm:grid-cols-4">
+          <div className="grid gap-4 sm:grid-cols-3">
           <div className="bg-white/5 rounded-xl p-4 border border-white/10 hover:border-tahoe-blue/40 transition-colors">
             <span className="text-2xl block mb-2">📺</span>
             <h3 className="font-bold text-white text-sm">Samsung C5000</h3>
@@ -91,26 +91,11 @@ export default function Home() {
               samsung-lcd-tv.vercel.app →
             </a>
           </div>
-          <div className="bg-white/5 rounded-xl p-4 border border-white/10 hover:border-tahoe-indigo/40 transition-colors">
-            <span className="text-2xl block mb-2">🖥️</span>
-            <h3 className="font-bold text-white text-sm">macOS 26 Tahoe</h3>
-            <p className="text-xs text-white/60 mt-1 leading-relaxed">
-              A macOS Built with 2026 tech and futuristic design like Liquid Glass released by Apple at WWDC 2025. React 19 glassmorphism, 20+ apps, window management, file system with drag-and-drop.
-            </p>
-            <a
-              href="https://macos-26-tahoe.vercel.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-tahoe-blue text-xs mt-2 inline-block hover:underline font-mono"
-            >
-              macos-26-tahoe.vercel.app →
-            </a>
-          </div>
           <div className="bg-white/5 rounded-xl p-4 border border-white/10 hover:border-tahoe-orange/40 transition-colors">
             <span className="text-2xl block mb-2">🌉</span>
             <h3 className="font-bold text-white text-sm">macOS 27 Golden Gate</h3>
             <p className="text-xs text-white/60 mt-1 leading-relaxed">
-              Apple's latest macOS announced at WWDC 2026. Siri AI with conversational assistant and dedicated app, Apple Intelligence 2.0, Visual Intelligence, Liquid Glass with adjustable opacity, unified toolbars, edge-to-edge sidebars, and major performance improvements. Apple Silicon only.
+              A production-grade OS that happens to run in a browser. React 18 + Framer Motion. 40+ apps, Notification Center with Glass.mp3, spring-physics dock with magnification, 126 dark/light icons, Wallpaper Engine, Virtual File System, OTA updates. Silicon-Native Liquid Glass. Zero build errors.
             </p>
             <a
               href="https://macos-27-golden-gate.vercel.app"
@@ -149,16 +134,16 @@ export default function Home() {
               <li>Samsung C5000 bezel — physical TV chassis rendered in CSS</li>
               <li>DishTV OSD — 2001–2016 broadcast UI language</li>
               <li>CRT scanlines — visual artifact from analog era</li>
-              <li>macOS Lion design language — pre-Monterey, pre-Neumorphism</li>
+              <li>macOS Golden Gate glass — silicon-native liquid glass, post-Aqua</li>
               <li>AajTak archives — 2014–2026 Indian news broadcasts</li>
             </ul>
           </div>
           <div>
             <h3 className="text-sm font-bold text-white/90 mb-2">Futuristic Layer (2026)</h3>
             <ul className="space-y-1.5 text-xs text-white/60 list-disc list-inside">
-              <li>React 19 + TypeScript — modern framework, strict typing</li>
+              <li>React 18 + TypeScript — modern framework, strict typing, zero build errors</li>
               <li>AI Picker — Gemini + Groq + DeepSeek R1 consensus inference</li>
-              <li>Glassmorphism — 2020s UI trend, backdrop-filter</li>
+              <li>Glassmorphism — 50px backdrop-blur, 190% saturation, Framer Motion springs</li>
               <li>Vercel Edge — serverless, globally distributed</li>
               <li>HLS streaming — HTTP Live Streaming, modern broadcast protocol</li>
               <li>Stress testing methodology — novel browser benchmarking approach</li>
@@ -229,8 +214,8 @@ export default function Home() {
           <div className="bg-emerald-400/5 rounded-xl p-4 border border-emerald-400/20">
             <h3 className="text-sm font-bold text-emerald-400 mb-2">June 1–5, 2026 (1 week)</h3>
             <ul className="space-y-1 text-xs text-white/60 font-mono">
-              <li>├── Samsung C5000 (v1.0.27.1, production-ready)</li>
-              <li>├── macOS 26 Tahoe (React 19, full feature set)</li>
+              <li>├── Samsung C5000 (v1.0.31, production-ready)</li>
+              <li>├── macOS 27 Golden Gate (v27.2, final shipping state)</li>
               <li>├── aashman-homepage (portfolio + documentation)</li>
               <li>├── STRESS.md (methodology + empirical data)</li>
               <li>├── GitHub repos with releases</li>
@@ -264,7 +249,7 @@ export default function Home() {
           </span>
         </div>
         <div className="flex flex-wrap gap-2">
-          {['React 19', 'TypeScript', 'Tailwind CSS', 'Vite', 'Vercel Edge', 'HLS', 'H.264', 'Gemini', 'Groq', 'DeepSeek R1', 'RAG', 'Virtual Filesystem', 'OTA Updates', 'Claude + OpenCode', 'GitHub Releases CDN'].map((t) => (
+          {['React 18', 'TypeScript', 'Framer Motion', 'Tailwind CSS', 'Vite', 'Vercel Edge', 'HLS', 'H.264', 'Gemini', 'Groq', 'DeepSeek R1', 'RAG', 'Virtual Filesystem', 'OTA Updates', 'ImageMagick', 'Claude + OpenCode', 'GitHub Releases CDN'].map((t) => (
             <span
               key={t}
               className="px-2.5 py-1 rounded-md text-[10px] font-mono text-white/60 bg-white/5 border border-white/10"
@@ -363,14 +348,21 @@ export default function Home() {
           </span>
         </div>
         <p className="text-sm text-white/70 mb-3 font-semibold">Why preserve 2010–2011 systems in 2026?</p>
-        <ul className="space-y-1.5 text-sm text-white/70 list-disc list-inside mb-4">
+        <ul className="space-y-1.5 text-sm text-white/70 list-disc list-inside mb-6">
           <li><strong className="text-white">Last moment of broadcast dominance</strong> — before streaming took over</li>
           <li><strong className="text-white">Peak of feature phones</strong> — before app stores</li>
           <li><strong className="text-white">Last Windows XP / macOS Lion generation</strong> — before modern OS</li>
           <li><strong className="text-white">Peak of Indian DTH expansion</strong> — DishTV, Airtel, Tata Sky competitive era</li>
         </ul>
+        <p className="text-sm text-white/70 mb-3 font-semibold">Why build a 2026 OS in a browser?</p>
+        <ul className="space-y-1.5 text-sm text-white/70 list-disc list-inside mb-4">
+          <li><strong className="text-white">Last moment of pure-web app limits</strong> — before WebGPU/WebAssembly take everything native</li>
+          <li><strong className="text-white">Peak of React SPA architecture</strong> — before the next paradigm shift</li>
+          <li><strong className="text-white">Glassmorphism as the final skeuomorphic gesture</strong> — before flat design won</li>
+          <li><strong className="text-white">Proof that a browser can be a full operating system</strong> — 18,400 lines, zero errors, hardware APIs, file system, OTA updates</li>
+        </ul>
         <p className="text-sm text-white/80 text-center italic border-t border-white/10 pt-4">
-          You&apos;re not just being nostalgic. You&apos;re <strong>documenting a historical transition.</strong>
+          You&apos;re not just being nostalgic. You&apos;re <strong>documenting a historical transition from both sides.</strong>
         </p>
         <p className="text-xs text-white/50 text-center mt-2">
           The code itself is the artifact. Vercel is the museum. GitHub is the archive. Browser is the display case.

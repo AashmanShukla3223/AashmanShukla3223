@@ -36,11 +36,43 @@ export default function Now() {
       </section>
 
       <section className="glass rounded-2xl p-6 sm:p-8 animate-slide-up" style={{ animationDelay: '0.18s' }}>
-        <h2 className="text-lg font-bold text-white mb-3">🏠 This homepage</h2>
-        <p className="text-sm text-white/70">
-          You&apos;re reading the v1.0 launch. React 19 + Vite + Tailwind + TypeScript, hybrid macOS Tahoe
-          glassmorphism × Samsung 2010 OSD aesthetic. Replacing my GitHub-profile redirect.
-        </p>
+        <h2 className="text-lg font-bold text-white mb-3">🌉 macOS 27 Golden Gate — v27.2 (Final)</h2>
+        <ul className="space-y-2 text-sm text-white/70">
+          <li>
+            <span className="text-emerald-400 font-mono text-xs mr-2">SHIPPED</span>
+            Final shipping state. <strong className="text-white/90">No planned updates.</strong> App_Version and version.json both at 27.2 — OTA reports no update available.
+          </li>
+          <li>
+            <span className="text-emerald-400 font-mono text-xs mr-2">SHIPPED</span>
+            40+ apps, Notification Center with Glass.mp3, spring-physics dock magnification, 126 dark/light icons, Wallpaper Engine, Control Center, Virtual File System, OTA pipeline, Boot lifecycle with 432Hz chime
+          </li>
+          <li>
+            <span className="text-emerald-400 font-mono text-xs mr-2">SHIPPED</span>
+            18,400+ lines of TypeScript, 127 components, 3 state machines, 210+ assets — zero build errors
+          </li>
+          <li>
+            <span className="text-white/40 font-mono text-xs mr-2">NOTE</span>
+            macOS 26 Tahoe has officially expired. Golden Gate is the current and final macOS simulator.
+          </li>
+        </ul>
+      </section>
+
+      <section className="glass rounded-2xl p-6 sm:p-8 animate-slide-up" style={{ animationDelay: '0.18s' }}>
+        <h2 className="text-lg font-bold text-white mb-3">📺 Samsung C5000 — v1.0.31 (Capstone)</h2>
+        <ul className="space-y-2 text-sm text-white/70">
+          <li>
+            <span className="text-emerald-400 font-mono text-xs mr-2">SHIPPED</span>
+            33 channels across News/Kids/Entertainment with full DishTV EPG, 4 daypart blocks, 30-day schedule
+          </li>
+          <li>
+            <span className="text-emerald-400 font-mono text-xs mr-2">SHIPPED</span>
+            3 LIVE channels: India TV (141), Republic Bharat (142), 9XM Live (321), Sony Kal HD LIVE (322)
+          </li>
+          <li>
+            <span className="text-white/40 font-mono text-xs mr-2">NEXT</span>
+            Community submissions: stress test results, archive contributions, simulator extensions
+          </li>
+        </ul>
       </section>
 
       <section className="glass rounded-2xl p-6 sm:p-8 animate-slide-up" style={{ animationDelay: '0.26s' }}>
