@@ -177,3 +177,81 @@ body {
 .prose-aashman li { margin: 0.25rem 0; }
 .prose-aashman blockquote { border-left: 3px solid #1e5aa3; padding-left: 1rem; color: #9bbde5; margin: 1rem 0; font-style: italic; }
 .prose-aashman hr { border: none; border-top: 0.5px solid rgba(155,189,229,0.2); margin: 2rem 0; }
+
+/* ─── Deslopified motion layer ───────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap');
+
+:root {
+  --ease-human: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-soft: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+h1, h2, h3, .font-serif {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+
+.glass, .glass-strong {
+  transition:
+    transform 700ms var(--ease-human),
+    border-color 500ms ease,
+    box-shadow 700ms var(--ease-human),
+    background-color 500ms ease;
+}
+
+.glass:hover, .glass-strong:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.24), inset 0 0 0 0.5px rgba(255,255,255,0.08);
+}
+
+.animate-slide-up {
+  animation: humanRise 850ms var(--ease-human) both;
+}
+
+.animate-slide-up:nth-child(2) { animation-delay: 90ms !important; }
+.animate-slide-up:nth-child(3) { animation-delay: 160ms !important; }
+.animate-slide-up:nth-child(4) { animation-delay: 230ms !important; }
+.animate-slide-up:nth-child(5) { animation-delay: 300ms !important; }
+
+@keyframes humanRise {
+  from { opacity: 0; transform: translateY(22px) rotateX(3deg); filter: blur(4px); }
+  to { opacity: 1; transform: translateY(0) rotateX(0); filter: blur(0); }
+}
+
+@keyframes gentleAir {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  50% { transform: translate3d(0, -7px, 0) rotate(0.6deg); }
+}
+
+@keyframes softSwoosh {
+  from { opacity: 0; transform: translateX(-18px) skewX(-3deg); }
+  to { opacity: 1; transform: translateX(0) skewX(0); }
+}
+
+.hero-orb, .traffic-lights {
+  animation: gentleAir 7s ease-in-out infinite;
+}
+
+.osd-button, .glass a, button {
+  transition: transform 450ms var(--ease-human), color 300ms ease, background 400ms ease;
+}
+
+.osd-button:hover, button:hover {
+  transform: translateY(-2px);
+}
+
+a:not(.glass):not(.osd-button) {
+  text-underline-offset: 4px;
+  transition: color 350ms ease, text-decoration-color 350ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 1ms !important;
+  }
+}
