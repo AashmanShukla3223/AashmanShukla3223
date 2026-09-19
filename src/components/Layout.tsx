@@ -50,7 +50,7 @@ export default function Layout() {
         </nav>
       </header>
 
-      <main className="flex-1 px-4 sm:px-6 py-8 sm:py-12">
+      <main className="flex-1 px-4 sm:px-6 pt-4 sm:pt-6 pb-8 sm:pb-12">
         <PageTransition>
           <Outlet />
         </PageTransition>
