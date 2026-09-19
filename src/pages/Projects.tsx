@@ -3,7 +3,7 @@ import { projects } from '../data/projects';
 export default function Projects() {
   return <div className="max-w-5xl mx-auto">
     <header className="max-w-2xl animate-slide-up">
-      <p className="text-[10px] uppercase tracking-widest font-mono text-tahoe-mint">Selected work</p>
+      
       <h1 className="mt-4 text-5xl sm:text-7xl font-bold tracking-[-0.06em] text-white">Things I’ve<br /><span className="text-white/35">made real.</span></h1>
       <p className="mt-6 text-lg text-white/60 leading-relaxed">Interfaces, simulators, and experiments that reward a second look.</p>
     </header>
