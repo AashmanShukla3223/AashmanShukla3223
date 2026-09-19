@@ -23,7 +23,7 @@ export default function Layout() {
           <ul className="flex items-center gap-0.5 sm:gap-1 overflow-x-auto">
             {navItems.map((item) => <li key={item.to}><NavLink to={item.to} end={item.end} className={({ isActive }) => `px-2.5 sm:px-3 py-1.5 rounded-full text-[11px] sm:text-xs font-mono transition-all whitespace-nowrap ${isActive ? 'bg-white/15 text-white' : 'text-white/45 hover:text-white'}`}>{item.label}</NavLink>)}
           </ul>
-        </nav>
+        </ul></nav>
       </header>
       <main className="flex-1 px-4 sm:px-6 py-8 sm:py-12"><PageTransition><Outlet /></PageTransition></main>
       <footer className="px-4 sm:px-6 pb-6 mt-auto">
