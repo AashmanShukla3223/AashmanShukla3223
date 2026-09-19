@@ -12,7 +12,7 @@ export default function LoadingScreen({ onFinish }: { onFinish: () => void }) {
     const track = trackRef.current;
     if (!track || received) return;
     const rect = track.getBoundingClientRect();
-    const next = Math.max(0, Math.min(100, ((rect.right - clientX) / rect.width) * 100));
+    const next = Math.max(0, Math.min(100, ((clientX - rect.left) / rect.width) * 100));
     setAnswer(next);
   };
 
@@ -38,7 +38,11 @@ export default function LoadingScreen({ onFinish }: { onFinish: () => void }) {
         <p className="caller-label">{received ? 'call connected' : 'incoming call'}</p>
         <h1 className="caller-name">{received ? 'Connected' : 'Developer'}</h1>
         <p className="caller-sub">{received ? 'entering the archive…' : 'your next idea'}</p>
-        {!received && <><div className="call-actions"><button className="call-decline" aria-label="decline call">×</button><button className="call-answer" aria-label="answer call">⌁</button></div><div ref={trackRef} className="answer-slider" onPointerDown={startSwipe} onPointerMove={(event) => { if (event.currentTarget.hasPointerCapture(event.pointerId)) move(event.clientX); }} onPointerUp={endSwipe} onPointerCancel={endSwipe}><div className="answer-fill" style={{ width: `${answer}%` }} /><div className="answer-handle" style={{ right: `${answer}%` }}>›</div><span>swipe to answer</span></div></>}
+        {!received && <div className="loading-orb" aria-label="Loading progress">
+          <svg viewBox="0 0 120 120" aria-hidden="true"><circle className="loading-orb-track" cx="60" cy="60" r="53" /><circle className="loading-orb-progress" cx="60" cy="60" r="53" pathLength="100" style={{ strokeDashoffset: 100 - answer }} /></svg>
+          <span>{Math.round(answer)}%</span>
+        </div>}
+        {!received && <div ref={trackRef} className="answer-slider" aria-label="Swipe from left to right to answer" onPointerDown={startSwipe} onPointerMove={(event) => { if (event.currentTarget.hasPointerCapture(event.pointerId)) move(event.clientX); }} onPointerUp={endSwipe} onPointerCancel={endSwipe}><div className="answer-fill" style={{ width: `${answer}%` }} /><div className="answer-handle" style={{ left: `calc(${answer}% - 25px)` }}>›</div></div>}
         {received && <div className="received-mark">✓</div>}
         <div className="call-progress"><i style={{ width: `${answer}%` }} /></div>
       </div>
