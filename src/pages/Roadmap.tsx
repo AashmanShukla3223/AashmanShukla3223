@@ -18,7 +18,7 @@ export default function Roadmap() {
     </section>
 
     <section className="mt-5 grid gap-4 sm:grid-cols-[0.8fr_1.2fr] animate-slide-up">
-      <div className="glass rounded-2xl p-6"><div className="flex items-center justify-between gap-3"><p className="text-[10px] uppercase tracking-widest font-mono text-white/35">origin point</p><span className="text-[10px] uppercase tracking-widest font-mono text-emerald-300">active</span></div><p className="mt-3 text-3xl font-bold text-white">April 2026</p><p className="mt-2 text-sm font-semibold text-tahoe-blue">macOS 26 Tahoe</p><p className="mt-2 text-sm leading-relaxed text-white/55">The first experiment: rebuilding a familiar operating system as a living browser world.</p></div>
+      <div className="glass rounded-2xl p-6"><div className="flex items-center justify-between gap-3"><p className="text-[10px] uppercase tracking-widest font-mono text-white/35">origin point</p><span className="text-[10px] uppercase tracking-widest font-mono text-emerald-300">active</span></div><p className="mt-3 text-3xl font-serif text-white">April 2026</p><p className="mt-2 text-lg font-serif text-tahoe-blue">macOS 26 Tahoe</p><p className="mt-2 text-sm leading-relaxed text-white/55">The first experiment: rebuilding a familiar operating system as a living browser world.</p></div>
       <div className="glass rounded-2xl p-6 flex items-center"><p className="text-lg font-serif leading-relaxed text-white/75">From one small simulator to an ecosystem of preserved hardware, operating systems, and stress-tested browser worlds.</p></div>
     </section>
 
