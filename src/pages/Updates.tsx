@@ -1,7 +1,7 @@
 import { useOTAUpdate } from '../hooks/useOTAUpdate';
 
 export default function Updates() {
-  const { current, latest, loading, error, buildTime, check } = useOTAUpdate();
+  const { current, latest, available, loading, error, buildTime, check } = useOTAUpdate();
   const upToDate = latest !== null && latest === current;
 
   return <div className="max-w-4xl mx-auto">
@@ -17,7 +17,10 @@ export default function Updates() {
       </div>
       {buildTime && <p className="mt-6 text-xs text-white/40 font-mono">Last checked · {new Date(buildTime).toLocaleString()}</p>}
       {error && <p className="mt-5 text-sm text-red-300">Couldn’t check right now. {error}</p>}
-      <button onClick={check} disabled={loading} className="osd-button mt-7 px-4 py-2.5 rounded-xl text-sm font-semibold disabled:opacity-50">{loading ? 'Checking…' : 'Check for updates'}</button>
+      <div className="mt-7 flex flex-wrap gap-3">
+        <button onClick={check} disabled={loading} className="glass px-4 py-2.5 rounded-xl text-sm font-semibold text-white/75 hover:text-white disabled:opacity-50">{loading ? 'Checking…' : 'Check for updates'}</button>
+        {available && <button onClick={() => window.location.reload()} className="osd-button px-4 py-2.5 rounded-xl text-sm font-semibold">Install update</button>}
+      </div>
     </section>
   </div>;
 }

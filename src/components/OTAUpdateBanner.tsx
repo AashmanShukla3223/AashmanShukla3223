@@ -27,7 +27,7 @@ export default function OTAUpdateBanner() {
                 onClick={() => location.reload()}
                 className="osd-button px-3 py-1 rounded-lg text-xs font-semibold"
               >
-                Reload
+                Install update
               </button>
               <button
                 onClick={check}
