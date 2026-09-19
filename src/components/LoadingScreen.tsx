@@ -30,6 +30,7 @@ export default function LoadingScreen({ onFinish }: { onFinish: () => void }) {
 
   return <div className={`incoming-call ${received ? 'call-received' : ''} fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-[#05070c] text-white`}>
     <div className="call-glow" />
+    <div className="loader-layout">
     <div className="phone-shell">
       <div className="phone-screen">
         <div className="dynamic-island"><span /><span /></div>
@@ -38,10 +39,6 @@ export default function LoadingScreen({ onFinish }: { onFinish: () => void }) {
         <p className="caller-label">{received ? 'call connected' : 'incoming call'}</p>
         <h1 className="caller-name">{received ? 'Connected' : 'Developer'}</h1>
         <p className="caller-sub">{received ? 'entering the archive…' : 'your next idea'}</p>
-        {!received && <div className="loading-orb" aria-label="Loading progress">
-          <svg viewBox="0 0 120 120" aria-hidden="true"><circle className="loading-orb-track" cx="60" cy="60" r="53" /><circle className="loading-orb-progress" cx="60" cy="60" r="53" pathLength="100" style={{ strokeDashoffset: 100 - answer }} /></svg>
-          <span>{Math.round(answer)}%</span>
-        </div>}
         {!received && <>
           <div className="call-options">
             <button type="button" aria-label="Remind me" className="call-option"><span>◷</span><small>Remind Me</small></button>
@@ -52,6 +49,11 @@ export default function LoadingScreen({ onFinish }: { onFinish: () => void }) {
         {received && <div className="received-mark">✓</div>}
         <div className="call-progress"><i style={{ width: `${answer}%` }} /></div>
       </div>
+    </div>
+    {!received && <div className="loading-orb outside-loading-orb" aria-label="Loading progress">
+      <svg viewBox="0 0 120 120" aria-hidden="true"><circle className="loading-orb-track" cx="60" cy="60" r="53" /><circle className="loading-orb-progress" cx="60" cy="60" r="53" pathLength="100" style={{ strokeDashoffset: 100 - answer }} /></svg>
+      <span>{Math.round(answer)}%</span>
+    </div>}
     </div>
   </div>;
 }
