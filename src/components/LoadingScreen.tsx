@@ -1,6 +1,12 @@
 import { useEffect, useRef, useState, type PointerEvent } from 'react';
 
-export default function LoadingScreen({ onFinish }: { onFinish: () => void }) {
+export default function LoadingScreen({
+  onFinish,
+  onComplete,
+}: {
+  onFinish: () => void;
+  onComplete?: () => void;
+}) {
   const [answer, setAnswer] = useState(0);
   const [received, setReceived] = useState(false);
   const trackRef = useRef<HTMLDivElement>(null);
@@ -26,6 +32,7 @@ export default function LoadingScreen({ onFinish }: { onFinish: () => void }) {
     if (answer < 92 || received) { setAnswer(0); return; }
     setAnswer(100);
     setReceived(true);
+    onComplete?.();
     finishTimer.current = window.setTimeout(onFinish, 850);
   };
 

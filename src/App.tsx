@@ -20,20 +20,24 @@ export default function App() {
   const [celebrating, setCelebrating] = useState(false);
   const location = useLocation();
 
+  const handleLoadingComplete = useCallback(() => {
+    setCelebrating(true);
+  }, []);
+
   const finishLoading = useCallback(() => {
     setLoading(false);
     setCelebrating(true);
   }, []);
 
-  if (loading) {
-    return <LoadingScreen onFinish={finishLoading} />;
-  }
-
   return (
-    <div className="app-backdrop">
+    <>
       {celebrating && <Confetti onComplete={() => setCelebrating(false)} />}
-      <AnimatePresence mode="wait">
-        <Routes location={location} key={location.pathname}>
+      {loading ? (
+        <LoadingScreen onComplete={handleLoadingComplete} onFinish={finishLoading} />
+      ) : (
+        <div className="app-backdrop">
+          <AnimatePresence mode="wait">
+            <Routes location={location} key={location.pathname}>
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
@@ -48,6 +52,8 @@ export default function App() {
           </Route>
         </Routes>
       </AnimatePresence>
-    </div>
+        </div>
+      )}
+    </>
   );
 }
