@@ -9,6 +9,7 @@ const navItems = [
   { to: '/now', label: 'Now' },
   { to: '/stress', label: 'Lab' },
   { to: '/credits', label: 'About' },
+  { to: '/updates', label: 'Updates' },
 ];
 
 export default function Layout() {

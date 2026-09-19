@@ -44,7 +44,7 @@ export default function LoadingScreen({ onFinish }: { onFinish: () => void }) {
             <button type="button" aria-label="Remind me" className="call-option"><span>◷</span><small>Remind Me</small></button>
             <button type="button" aria-label="Voicemail" className="call-option"><span>⌁</span><small>Voicemail</small></button>
           </div>
-          <div ref={trackRef} className="answer-slider" aria-label="Slide to answer" onPointerDown={startSwipe} onPointerMove={(event) => { if (event.currentTarget.hasPointerCapture(event.pointerId)) move(event.clientX); }} onPointerUp={endSwipe} onPointerCancel={endSwipe}><div className="answer-fill" style={{ width: `${answer}%` }} /><div className="answer-handle" style={{ left: `calc(${answer}% - 25px)` }}>›</div><span>slide to answer</span></div>
+          <div ref={trackRef} className="answer-slider" aria-label="Slide to answer" onPointerDown={startSwipe} onPointerMove={(event) => { if (event.currentTarget.hasPointerCapture(event.pointerId)) move(event.clientX); }} onPointerUp={endSwipe} onPointerCancel={endSwipe}><div className="answer-fill" style={{ width: `${answer}%` }} /><div className="answer-handle" style={{ left: `calc(${answer}% - 25px)` }}>☎</div><span>slide to answer</span></div>
         </>}
         {received && <div className="received-mark">✓</div>}
         <div className="call-progress"><i style={{ width: `${answer}%` }} /></div>

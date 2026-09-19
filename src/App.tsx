@@ -11,6 +11,7 @@ import Now from './pages/Now';
 import Stress from './pages/Stress';
 import Credits from './pages/Credits';
 import NotFound from './pages/NotFound';
+import Updates from './pages/Updates';
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -32,6 +33,7 @@ export default function App() {
             <Route path="/now" element={<Now />} />
             <Route path="/stress" element={<Stress />} />
             <Route path="/credits" element={<Credits />} />
+            <Route path="/updates" element={<Updates />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
