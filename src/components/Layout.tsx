@@ -1,6 +1,7 @@
 import { Outlet, NavLink, Link } from 'react-router-dom';
 import OTAUpdateBanner from './OTAUpdateBanner';
 import PageTransition from './PageTransition';
+import Spotlight from './Spotlight';
 
 const navItems = [
   { to: '/', label: 'Home', end: true },
@@ -17,7 +18,7 @@ export default function Layout() {
   return (
     <div className="relative z-10 min-h-screen flex flex-col">
       <header className="sticky top-0 z-30 px-4 sm:px-6 pt-4">
-        <nav className="max-w-5xl mx-auto glass rounded-2xl px-4 py-3 flex items-center justify-between gap-4">
+        <nav className="max-w-5xl mx-auto glass rounded-2xl px-4 py-3 flex items-center justify-between gap-2 sm:gap-4">
           <Link to="/" className="flex items-center gap-3 shrink-0 group">
             <span className="traffic-lights" aria-hidden="true">
               <span className="traffic-light tl-red" />
@@ -28,26 +29,29 @@ export default function Layout() {
               Aashman
             </span>
           </Link>
-          <ul className="flex items-center gap-0.5 sm:gap-1 overflow-x-auto">
-            {navItems.map((item) => (
-              <li key={item.to}>
-                <NavLink
-                  to={item.to}
-                  end={item.end}
-                  className={({ isActive }) =>
-                    [
-                      'px-2.5 sm:px-3 py-1.5 rounded-full text-[11px] sm:text-xs font-mono transition-all whitespace-nowrap',
-                      isActive
-                        ? 'bg-white/15 text-white'
-                        : 'text-white/45 hover:text-white',
-                    ].join(' ')
-                  }
-                >
-                  {item.label}
-                </NavLink>
-              </li>
-            ))}
-          </ul>
+          <div className="flex items-center gap-2 overflow-x-auto">
+            <ul className="flex items-center gap-0.5 sm:gap-1">
+              {navItems.map((item) => (
+                <li key={item.to}>
+                  <NavLink
+                    to={item.to}
+                    end={item.end}
+                    className={({ isActive }) =>
+                      [
+                        'px-2.5 sm:px-3 py-1.5 rounded-full text-[11px] sm:text-xs font-mono transition-all whitespace-nowrap',
+                        isActive
+                          ? 'bg-white/15 text-white'
+                          : 'text-white/45 hover:text-white',
+                      ].join(' ')
+                    }
+                  >
+                    {item.label}
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
+            <Spotlight />
+          </div>
         </nav>
       </header>
 

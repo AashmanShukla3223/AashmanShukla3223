@@ -1,9 +1,10 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Layout from './components/Layout';
 import LoadingScreen from './components/LoadingScreen';
 import Confetti from './components/Confetti';
+import { subscribeConfetti } from './utils/confetti';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Writing from './pages/Writing';
@@ -19,6 +20,10 @@ export default function App() {
   const [loading, setLoading] = useState(true);
   const [celebrating, setCelebrating] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    return subscribeConfetti(() => setCelebrating(true));
+  }, []);
 
   const handleLoadingComplete = useCallback(() => {
     setCelebrating(true);
