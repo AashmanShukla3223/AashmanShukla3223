@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Layout from './components/Layout';
 import LoadingScreen from './components/LoadingScreen';
+import Confetti from './components/Confetti';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Writing from './pages/Writing';
@@ -16,14 +17,21 @@ import Roadmap from './pages/Roadmap';
 
 export default function App() {
   const [loading, setLoading] = useState(true);
+  const [celebrating, setCelebrating] = useState(false);
   const location = useLocation();
 
+  const finishLoading = useCallback(() => {
+    setLoading(false);
+    setCelebrating(true);
+  }, []);
+
   if (loading) {
-    return <LoadingScreen onFinish={() => setLoading(false)} />;
+    return <LoadingScreen onFinish={finishLoading} />;
   }
 
   return (
     <div className="app-backdrop">
+      {celebrating && <Confetti onComplete={() => setCelebrating(false)} />}
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route element={<Layout />}>
