@@ -10,7 +10,7 @@ export default function Home() {
     <div className="max-w-5xl mx-auto">
       <section className="glass-strong rounded-3xl p-7 sm:p-12 animate-slide-up">
         <div className="flex items-center justify-between gap-4 text-[10px] uppercase tracking-widest font-mono text-white/45">
-          <span>Personal archive / Kanpur, India</span>
+          <span>personal archive / kanpur, india</span>
           <span className="text-emerald-300">Available for curious work</span>
         </div>
 
@@ -73,7 +73,7 @@ export default function Home() {
 
       <section className="mt-20 grid gap-8 sm:grid-cols-2">
         <div className="glass rounded-2xl p-6">
-          <p className="text-[10px] uppercase tracking-widest font-mono text-tahoe-orange">Currently</p>
+          <p className="text-[10px] uppercase tracking-widest font-mono text-tahoe-orange">currently</p>
           <p className="mt-5 text-white/75 leading-relaxed">Making browser experiences, learning in public, and trying to leave every interface a little more considered than I found it.</p>
         </div>
         {latest && (
