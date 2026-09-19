@@ -8,6 +8,7 @@ const navItems = [
   { to: '/writing', label: 'Notes' },
   { to: '/now', label: 'Now' },
   { to: '/stress', label: 'Lab' },
+  { to: '/roadmap', label: 'Roadmap' },
   { to: '/credits', label: 'About' },
   { to: '/updates', label: 'Updates' },
 ];
