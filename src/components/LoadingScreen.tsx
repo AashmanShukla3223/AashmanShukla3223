@@ -1,20 +1,23 @@
 import { useEffect, useState } from 'react';
 
-const stages = ['Waking the archive', 'Tuning the glass', 'Opening the studio'];
-
 export default function LoadingScreen({ onFinish }: { onFinish: () => void }) {
   const [progress, setProgress] = useState(0);
-  useEffect(() => {
-    const started = performance.now();
-    const tick = () => {
-      const value = Math.min(100, ((performance.now() - started) / 1050) * 100);
-      setProgress(value);
-      if (value < 100) requestAnimationFrame(tick);
-      else window.setTimeout(onFinish, 260);
-    };
-    const frame = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(frame);
-  }, [onFinish]);
-  const stage = progress < 38 ? stages[0] : progress < 75 ? stages[1] : stages[2];
-  return <div className="fixed inset-0 z-50 flex items-end p-6 sm:p-10 bg-[#071426] text-white"><div className="w-full max-w-5xl mx-auto"><div className="flex items-end justify-between gap-6"><div><p className="text-[10px] uppercase tracking-[0.22em] text-white/45 font-mono">Aashman Shukla / personal archive</p><h1 className="mt-3 text-4xl sm:text-6xl font-bold tracking-[-0.05em]">A place for curious things.</h1></div><span className="font-mono text-sm text-[#63e6e2]">{Math.round(progress)}%</span></div><div className="mt-8 h-px bg-white/15 overflow-hidden"><div className="h-full bg-gradient-to-r from-[#0a84ff] via-[#63e6e2] to-[#ff375f]" style={{width:`${progress}%`}} /></div><p className="mt-3 text-xs text-white/45 font-mono">{stage}…</p></div></div>;
+  useEffect(() => { const started = performance.now(); const tick = () => { const value = Math.min(100, ((performance.now() - started) / 1450) * 100); setProgress(value); if (value < 100) requestAnimationFrame(tick); else window.setTimeout(onFinish, 300); }; const frame = requestAnimationFrame(tick); return () => cancelAnimationFrame(frame); }, [onFinish]);
+  return <div className="incoming-call fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-[#05070c] text-white">
+    <div className="call-glow" />
+    <div className="phone-shell">
+      <div className="phone-screen">
+        <div className="dynamic-island"><span /><span /></div>
+        <div className="call-time">{Math.max(0, Math.round(1.45 - progress / 100 * 1.45)).toFixed(2)}</div>
+        <div className="caller-avatar"><span className="avatar-head" /><span className="avatar-body" /></div>
+        <p className="caller-label">incoming call</p>
+        <h1 className="caller-name">Developer</h1>
+        <p className="caller-sub">your next idea</p>
+        <div className="call-actions"><button className="call-decline" aria-label="decline call">×</button><button className="call-answer" aria-label="answer call">⌁</button></div>
+        <div className="swipe-track"><span className="swipe-arrow">↑</span><span>swipe to answer</span></div>
+        <div className="call-progress"><i style={{ width: `${progress}%` }} /></div>
+      </div>
+    </div>
+    <p className="phone-caption">Aashman Shukla <span>/</span> personal archive</p>
+  </div>;
 }
