@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type PointerEvent } from 'react';
 
 export default function LoadingScreen({ onFinish }: { onFinish: () => void }) {
   const [answer, setAnswer] = useState(0);
@@ -16,7 +16,7 @@ export default function LoadingScreen({ onFinish }: { onFinish: () => void }) {
     setAnswer(next);
   };
 
-  const startSwipe = (event: React.PointerEvent<HTMLDivElement>) => {
+  const startSwipe = (event: PointerEvent<HTMLDivElement>) => {
     event.currentTarget.setPointerCapture(event.pointerId);
     move(event.clientX);
   };
