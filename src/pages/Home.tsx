@@ -11,7 +11,7 @@ export default function Home() {
       <div className="flex items-center justify-between gap-4 text-[10px] uppercase tracking-widest font-mono text-white/45">
         <span>personal archive / kanpur, india</span><span className="text-emerald-300">available for work</span>
       </div>
-      <div className="mt-12 sm:mt-20 max-w-4xl">
+      <div className="mt-6 sm:mt-10 max-w-4xl">
         <p className="text-sm text-tahoe-mint font-mono mb-5">Aashman Shukla</p>
         <h1 className="text-5xl sm:text-7xl font-bold tracking-[-0.06em] leading-[0.95] text-white">I build strange little worlds for the browser.</h1>
         <p className="mt-7 max-w-2xl text-lg sm:text-xl leading-relaxed text-white/65">Production simulators and interfaces with enough detail to feel like they have a past.</p>
