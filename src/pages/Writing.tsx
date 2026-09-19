@@ -3,45 +3,8 @@ import { posts } from '../data/posts';
 
 export default function Writing() {
   const sorted = [...posts].sort((a, b) => b.date.localeCompare(a.date));
-
-  return (
-    <div className="max-w-3xl mx-auto space-y-6">
-      <header className="glass-strong rounded-3xl p-8 animate-slide-up">
-        <h1 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">Writing</h1>
-        <p className="mt-3 text-white/70 text-base">
-          Technical essays on retro-futurism as archival practice, browser stress testing methodology, Indian broadcast media history, and building with AI-assisted development.
-        </p>
-      </header>
-
-      <ul className="space-y-3">
-        {sorted.map((post, i) => (
-          <li
-            key={post.slug}
-            className="glass rounded-2xl p-5 sm:p-6 transition-all hover:shadow-glass-lg animate-slide-up"
-            style={{ animationDelay: `${0.05 + i * 0.06}s` }}
-          >
-            <Link to={`/writing/${post.slug}`} className="group block">
-              <div className="flex items-baseline justify-between gap-4 flex-wrap">
-                <h2 className="text-lg sm:text-xl font-bold text-white group-hover:text-tahoe-blue transition-colors">
-                  {post.title}
-                </h2>
-                <time className="text-xs font-mono text-white/40">{post.date}</time>
-              </div>
-              <p className="mt-2 text-white/60 text-sm">{post.excerpt}</p>
-              <div className="mt-3 flex gap-1.5 flex-wrap">
-                {post.tags.map((t) => (
-                  <span
-                    key={t}
-                    className="px-2 py-0.5 rounded-md text-[10px] font-mono text-white/45 bg-white/5 border border-white/10"
-                  >
-                    #{t}
-                  </span>
-                ))}
-              </div>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+  return <div className="max-w-4xl mx-auto">
+    <header className="max-w-2xl animate-slide-up"><p className="text-[10px] uppercase tracking-widest font-mono text-tahoe-orange">Notes from the workbench</p><h1 className="mt-4 text-5xl sm:text-7xl font-bold tracking-[-0.06em] text-white">Things I<br /><span className="text-white/35">keep noticing.</span></h1><p className="mt-6 text-lg text-white/60 leading-relaxed">Small essays about old interfaces, new tools, and the feeling between the two.</p></header>
+    <div className="mt-16 border-t border-white/10">{sorted.map((post, i) => <Link key={post.slug} to={`/writing/${post.slug}`} className="group block py-7 border-b border-white/10 animate-slide-up" style={{ animationDelay: `${i * 70}ms` }}><div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2"><h2 className="text-2xl sm:text-3xl font-serif text-white group-hover:text-tahoe-mint transition-colors">{post.title}</h2><time className="text-[11px] font-mono text-white/35">{post.date}</time></div><p className="mt-3 max-w-2xl text-sm text-white/55">{post.excerpt}</p><span className="inline-block mt-4 text-[10px] uppercase tracking-widest font-mono text-tahoe-blue">Read note →</span></Link>)}</div>
+  </div>;
 }
