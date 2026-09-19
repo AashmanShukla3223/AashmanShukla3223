@@ -7,16 +7,16 @@ export default function Home() {
   const latest = posts[0];
 
   return <div className="max-w-5xl mx-auto">
-    <section className="glass-strong rounded-3xl p-7 sm:p-12 animate-slide-up">
+    <section className="glass-strong rounded-3xl p-7 sm:p-10 animate-slide-up">
       <div className="flex items-center justify-between gap-4 text-[10px] uppercase tracking-widest font-mono text-white/45">
         <span>personal archive / kanpur, india</span><span className="text-emerald-300">available for work</span>
       </div>
-      <div className="mt-20 sm:mt-28 max-w-4xl">
+      <div className="mt-12 sm:mt-20 max-w-4xl">
         <p className="text-sm text-tahoe-mint font-mono mb-5">Aashman Shukla</p>
         <h1 className="text-5xl sm:text-7xl font-bold tracking-[-0.06em] leading-[0.95] text-white">I build strange little worlds for the browser.</h1>
         <p className="mt-7 max-w-2xl text-lg sm:text-xl leading-relaxed text-white/65">Production simulators and interfaces with enough detail to feel like they have a past.</p>
       </div>
-      <div className="mt-12 flex flex-wrap gap-3"><Link to="/projects" className="osd-button px-5 py-3 rounded-xl text-sm font-semibold">Explore the work →</Link><a href="https://github.com/AashmanShukla3223" target="_blank" rel="noopener noreferrer" className="glass px-5 py-3 rounded-xl text-sm font-semibold text-white/80 hover:text-white transition-colors">GitHub</a></div>
+      <div className="mt-9 flex flex-wrap gap-3"><Link to="/projects" className="osd-button px-5 py-3 rounded-xl text-sm font-semibold">Explore the work →</Link><a href="https://github.com/AashmanShukla3223" target="_blank" rel="noopener noreferrer" className="glass px-5 py-3 rounded-xl text-sm font-semibold text-white/80 hover:text-white transition-colors">GitHub</a></div>
     </section>
 
     <section className="mt-20">
