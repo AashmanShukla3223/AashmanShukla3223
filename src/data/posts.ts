@@ -8,6 +8,14 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: 'current-builds',
+    title: 'Current builds: Samsung v1.0.32 and macOS Golden Gate v27.4.1',
+    date: '2026-11-01',
+    excerpt:
+      'Where the flagship simulators stand today — Samsung C5000 v1.0.32, macOS Golden Gate v27.4.1 with 52 apps, plus two new Android experiments.',
+    tags: ['samsung-c5000', 'macos-golden-gate', 'release-notes'],
+  },
+  {
     slug: 'shipping-v1-0-31',
     title: 'Shipping v1.0.31: 30+ Features and 10+ Channels in One Week',
     date: '2026-06-03',
