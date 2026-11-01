@@ -3,7 +3,7 @@ import { projects } from '../data/projects';
 import { posts } from '../data/posts';
 
 export default function Home() {
-  const featured = projects.filter((project) => project.highlight).slice(0, 1);
+  const featured = projects.slice(0, 4);
   const latest = posts[0];
 
   return <div className="max-w-5xl mx-auto">
@@ -23,8 +23,7 @@ export default function Home() {
       <div className="flex items-end justify-between border-b border-white/10 pb-4"><div><p className="text-[10px] uppercase tracking-widest font-mono text-white/45">selected work</p><h2 className="mt-3 text-3xl sm:text-5xl font-serif text-white">Built, shipped, and live.</h2></div><Link to="/projects" className="text-xs font-mono text-tahoe-blue hover:underline">all work →</Link></div>
       <p className="mt-6 max-w-2xl text-white/55 leading-relaxed">These are not concept shots. They are working systems: interfaces with state, memory, edge cases, and a point of view.</p>
       <div className="mt-7 grid gap-4 sm:grid-cols-2">
-        {featured.map((project) => <a key={project.id} href={project.url} target="_blank" rel="noopener noreferrer" className="glass rounded-2xl p-6 group hover:-translate-y-1 transition-transform"><div className="flex items-start justify-between gap-4"><span className="text-3xl">{project.emoji}</span><span className="text-[10px] font-mono text-emerald-300">live ↗</span></div><h3 className="mt-16 text-2xl font-bold text-white group-hover:text-tahoe-blue transition-colors">{project.name}</h3><p className="mt-2 text-sm text-white/55 leading-relaxed">{project.description}</p></a>)}
-        <a href="https://macos-27-golden-gate.vercel.app" target="_blank" rel="noopener noreferrer" className="glass rounded-2xl p-6 group hover:-translate-y-1 transition-transform"><div className="flex items-start justify-between gap-4"><span className="text-3xl">🌉</span><span className="text-[10px] font-mono text-emerald-300">live ↗</span></div><h3 className="mt-16 text-2xl font-bold text-white group-hover:text-tahoe-blue transition-colors">macOS Golden Gate</h3><p className="mt-2 text-sm text-white/55 leading-relaxed">A browser-sized operating system with windows, apps, glass, and a stubborn attention to detail.</p></a>
+        {featured.map((project) => <a key={project.id} href={project.url} target="_blank" rel="noopener noreferrer" className="glass rounded-2xl p-6 group hover:-translate-y-1 transition-transform"><div className="flex items-start justify-between gap-4"><span className="text-3xl">{project.emoji}</span><span className="text-[10px] font-mono text-emerald-300">{project.hideLive ? 'source ↗' : 'live ↗'}</span></div><h3 className="mt-16 text-2xl font-bold text-white group-hover:text-tahoe-blue transition-colors">{project.name}</h3><p className="mt-2 text-sm text-white/55 leading-relaxed">{project.description}</p></a>)}
       </div>
     </section>
 
