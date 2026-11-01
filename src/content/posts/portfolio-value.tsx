@@ -44,7 +44,7 @@ export default function PortfolioValue() {
         with no framework. It has three-path firmware OTA, a tri-provider AI Channel Picker with
         client-side RAG, a virtual USB filesystem, a full EPG, a full OSD, an atmospheric exhale
         window, a decoupled asset CDN, and a disaster-recovery story. An agency would quote six to
-        eight weeks of senior full-stack plus design plus QA. At $100 an hour, that is $90K. Not
+        eight weeks of senior full-stack plus design plus QA. At $200 an hour, that is $180K. Not
         because the lines of code are expensive — lines of code are cheap — but because the
         integration is expensive. Getting three OTA paths to converge on one install flow, with a
         conflict resolver, is not a feature. It is a system.
@@ -55,14 +55,14 @@ export default function PortfolioValue() {
         trash and self-healing. A liquid-glass design language implemented natively. Real telemetry
         from device APIs. A boot lifecycle. An OTA pipeline. An MCP server. An agency would quote
         four to six months of a small team — frontend, design, QA. At blended rates, that is
-        $260K. Again, not because of the lines. Because of the coherence. Every app opens. Every
+        $520K. Again, not because of the lines. Because of the coherence. Every app opens. Every
         window drags. Every icon renders. The thing works, and working is the expensive part.
       </p>
       <p>
-        The homepage and stress lab — the portfolio you are reading right now — is another $60K.
-        The Android experiments, Parallax Launcher and Self Calling, are another $70K between them.
+        The homepage and stress lab — the portfolio you are reading right now — is another $120K.
+        The Android experiments, Parallax Launcher and Self Calling, are another $140K between them.
         The tooling — shared prompts, MCP server, asset CDN, versioning scripts, CI — is another
-        $20K. Add it up: 90 + 260 + 60 + 70 + 20. Five hundred. Half a million dollars of
+        $40K. Add it up: 180 + 520 + 120 + 140 + 40. One million dollars of
         engineering, design, and QA, priced honestly, at market rates, by a solo builder who paid
         nothing for it.
       </p>
