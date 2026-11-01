@@ -1,6 +1,7 @@
 const tracks = [
-  { icon: '📺', name: 'Samsung C5000 TV', current: 'v1.0.33 · active now', next: '30-day EPG & channel disambiguation', later: 'Virtual PVR, dual audio, dynamic OTA asset packs', accent: 'text-tahoe-blue' },
-  { icon: '🌉', name: 'macOS Golden Gate', current: 'v27.5 · active next', next: 'Window snapping, Stage Manager, micro-Island controls', later: 'Migration Assistant, WebGPU glass, P2P Continuity', accent: 'text-tahoe-orange' },
+  { icon: '📺', name: 'Samsung C5000 TV', current: 'v1.0.32 · active now', next: 'Custom Picture Mode polish, 30-day EPG & channel disambiguation', later: 'Virtual PVR, dual audio, dynamic OTA asset packs', accent: 'text-tahoe-blue' },
+  { icon: '🌉', name: 'macOS Golden Gate', current: 'v27.4.1 · active next', next: 'Window snapping, Stage Manager, micro-Island controls', later: 'Migration Assistant, WebGPU glass, P2P Continuity', accent: 'text-tahoe-orange' },
+  { icon: '📲', name: 'Android Experiments', current: 'Parallax + Self Calling · active', next: 'RAZR V3i polish, Telecom edge cases, Compose refinements', later: 'More instrument panels, shared design system', accent: 'text-tahoe-mint' },
   { icon: '🏠', name: 'Homepage & Stress Lab', current: 'v1.1.0 · standing here', next: 'Live in-browser recursion benchmark with FPS telemetry', later: 'Archival essays, community benchmark dashboard', accent: 'text-tahoe-mint' },
 ];
 

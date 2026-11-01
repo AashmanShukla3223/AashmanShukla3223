@@ -29,7 +29,7 @@ export default function Home() {
     </section>
 
     <section className="mt-20 grid gap-8 sm:grid-cols-2">
-      <div className="glass rounded-2xl p-6"><p className="text-[10px] uppercase tracking-widest font-mono text-tahoe-orange">currently</p><p className="mt-5 text-white/75 leading-relaxed">Making the next version of the work: quieter, sharper, and more convincing in the details.</p></div>
+      <div className="glass rounded-2xl p-6"><p className="text-[10px] uppercase tracking-widest font-mono text-tahoe-orange">currently</p><p className="mt-5 text-white/75 leading-relaxed">Shipping Samsung C5000 v1.0.32, macOS Golden Gate v27.4.1, and two Android experiments — quieter, sharper, and more convincing in the details.</p></div>
       {latest && <Link to={`/writing/${latest.slug}`} className="glass rounded-2xl p-6 group"><p className="text-[10px] uppercase tracking-widest font-mono text-tahoe-orange">latest note · {latest.date}</p><h2 className="mt-5 text-xl font-bold text-white group-hover:text-tahoe-blue transition-colors">{latest.title}</h2><p className="mt-2 text-sm text-white/55">{latest.excerpt}</p><span className="inline-block mt-5 text-xs text-tahoe-blue font-mono">read it →</span></Link>}
     </section>
 

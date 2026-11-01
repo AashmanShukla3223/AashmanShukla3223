@@ -9,7 +9,7 @@ Preserving systems from 2010–2011 (the boundary between broadcast and streamin
 ## 🎯 Three Websites, One Vision
 
 ### 1. **Samsung C5000 LCD TV Simulator**
-**Live:** https://samsung-lcd-tv.vercel.app  
+**Live:** https://samsung-lcd-tv.vercel.app
 **Repo:** https://github.com/AashmanShukla3223/Samsung-LCD-TV-Simulator
 
 The exact 2010 hardware that defined an era. Full-featured DishTV DTH emulation with:
@@ -20,18 +20,18 @@ The exact 2010 hardware that defined an era. Full-featured DishTV DTH emulation 
 - **DishTV EPG/Guide** (full Electronic Programme Guide with 4 daypart blocks: Late Night, Morning, Mid Morning, LIVE)
 - **Full OSD dialogs** (Picture settings, Sleep Timer, Closed Captions, Retail Mode, etc.)
 
-**Current version:** v1.0.31 (22 News + 8 Kids + 2 Entertainment LIVE channels, full EPG with daypart navigation)  
+**Current version:** v1.0.32 (22 News + 8 Kids + 2 Entertainment LIVE channels, full EPG with daypart navigation)
 **Stress tested:** 2-level recursion confirmed on 4 GB ChromeOS (see STRESS.md)
 
 ---
 
 ### 2. **macOS 27 Golden Gate Simulator**
-**Live:** https://macos-27-golden-gate.vercel.app  
+**Live:** https://macos-27-golden-gate.vercel.app
 **Repo:** https://github.com/AashmanShukla3223/Antigravity-and-OpenCode-CLI-Prompts-and-Skills
 
-A production-grade operating system simulation that happens to run in a browser. React 18 + Vite + TypeScript + Framer Motion:
+A production-grade operating system simulation that happens to run in a browser. React 19 + Vite + TypeScript + Framer Motion:
 
-- **40+ apps** in the dock (Finder, Safari, Mail, Messages, FaceTime, Photos, Maps, Music, TV, Notes, Calendar, Contacts, Terminal, Xcode, Final Cut Pro, Logic Pro, Pixelmator Pro, Motion, GarageBand, iMovie, Chess, Minecraft, Books, Wallet, Calculator, Clock, Weather, Reminders, Stickies, Activity Monitor, Time Machine, Disk Utility, Phone, Photo Booth, Keynote, Numbers, Pages, GitHub, VMware Fusion Pro, Samsung LCD TV Simulator, VS Code, Freeform, App Store, Games, iPhone Mirroring, Siri, System Settings, About Me, Installer, and more)
+- **52 apps** in the dock (Finder, Safari, Mail, Messages, FaceTime, Photos, Maps, Music, TV, Notes, Calendar, Contacts, Terminal, Xcode, Final Cut Pro, Logic Pro, Pixelmator Pro, Motion, GarageBand, iMovie, Chess, Minecraft, Books, Wallet, Calculator, Clock, Weather, Reminders, Stickies, Activity Monitor, Time Machine, Disk Utility, Phone, Photo Booth, Keynote, Numbers, Pages, GitHub, VMware Fusion Pro, Samsung LCD TV Simulator, VS Code, Freeform, App Store, Games, iPhone Mirroring, Siri, System Settings, About Me, Installer, and more)
 - **Notification Center** with real-time toasts + Glass.mp3 sound (Mail 8s, Messages 12s, FaceTime 5s, PhotoBooth 2s cascade on desktop load)
 - **OTA Software Update** pipeline — fetches version.json, semver-compares against App_Version, shows a download-progress banner with close (X) button, redirects to Vercel deploy on install
 - **Virtual File System** (VFS) — nested nodes with parent IDs, trash system (move to trash, empty trash purges recursively), self-healing on corrupt state, persisted to localStorage under `golden_gate_v27_fs`
@@ -45,7 +45,7 @@ A production-grade operating system simulation that happens to run in a browser.
 - **Zero build errors** — `tsc --noEmit` passes clean at every commit
 - **Window management** — z-index stacking via activeApp, minimize/maximize/close, persistent state
 
-**Current version:** v27.2 (final shipping state)  
+**Current version:** v27.4.1 (final shipping state)
 **Codebase:** 18,400+ lines of TypeScript, 127 components, 3 state machines, 210+ assets
 
 ---
@@ -73,7 +73,7 @@ Technical essays on:
 
 #### **Now**
 Living status page (nownownow.com style):
-- Current projects (v1.0.31 shipped: 33 channels across News/Kids/Entertainment)
+- Current projects (v1.0.32 shipped: 33 channels across News/Kids/Entertainment)
 - Learning (browser internals, broadcast systems, archival methodology)
 - Stressing (2-level recursion limits, swap thrashing at level 3)
 
@@ -89,7 +89,7 @@ Living status page (nownownow.com style):
 - **AajTak archives** (2001–2020 Indian news broadcasts)
 
 ### Futuristic Layer (2026)
-- **React 18 + TypeScript** (modern framework, strict typing, zero build errors)
+- **React 19 + TypeScript** (modern framework, strict typing, zero build errors)
 - **AI Picker** (Gemini + Groq + DeepSeek R1 consensus inference)
 - **Glassmorphism** (50px backdrop-blur, 190% saturation, Framer Motion springs)
 - **Vercel Edge** (serverless, globally distributed)
@@ -108,14 +108,14 @@ Two simulators embedded recursively create measurable load that scales linearly 
 | Subsystem | Why It Matters |
 |-----------|----------------|
 | **Iframe process isolation** | Site isolation forces separate processes per origin; recursion multiplies that |
-| **JS heap fragmentation** | Two runtimes (vanilla JS + React 18) coexisting, repeated per level |
+| **JS heap fragmentation** | Two runtimes (vanilla JS + React 19) coexisting, repeated per level |
 | **CSS layout & paint** | Tailwind rebuilt per iframe, glassmorphism `backdrop-filter` per layer (GPU-heavy) |
 | **Audio context limits** | Chrome ~50 max, Firefox ~10, Safari ~6. Each level adds 1–2 contexts. Golden Gate plays Glass.mp3 on every notification. |
 | **Video decoder pipelines** | Each level can play MP4 + HLS via separate `HTMLVideoElement` decoders. Golden Gate wallpaper engine adds MP4 + H.264 decode stress. |
 
 ### Empirically Confirmed Results
-**Hardware:** 4 GB ChromeOS with Crostini (2 GB available to browser)  
-**Browser:** Chrome 138+  
+**Hardware:** 4 GB ChromeOS with Crostini (2 GB available to browser)
+**Browser:** Chrome 138+
 **Recursion ceiling:** **2 levels stable, 3 levels system-throttled**
 
 | Level | JS Heap | FPS Drag | System Response | Failure Mode |
@@ -134,8 +134,8 @@ Two simulators embedded recursively create measurable load that scales linearly 
 ### What You Built in One Week
 ```
 June 1–5, 2026:
-├── Samsung C5000 (v1.0.31, production-ready)
-├── macOS 27 Golden Gate (v27.2, final shipping state)
+├── Samsung C5000 (v1.0.32, production-ready)
+├── macOS 27 Golden Gate (v27.4.1, final shipping state)
 ├── aashman-homepage (portfolio + documentation)
 ├── STRESS.md (methodology + empirical data)
 ├── GitHub repos with releases
@@ -165,11 +165,11 @@ June 1–5, 2026:
 ## 🚀 Built With
 
 ### Tech Stack
-- **Frontend:** React 18, TypeScript, Tailwind CSS, Framer Motion, Vite
+- **Frontend:** React 19, TypeScript, Tailwind CSS, Framer Motion, Vite
 - **Hosting:** Vercel (serverless, edge functions, auto-scaling)
 - **Media:** HLS (HTTP Live Streaming), H.264 MP4s via GitHub Releases CDN
 - **AI:** Gemini, Groq, DeepSeek R1 (multi-backend consensus)
-- **Development:** Claude + OpenCode, GitHub, Vercel CLI
+- **Development:** OpenCode + Antigravity CLI + Qoder (backup), GitHub, Vercel CLI
 - **Image processing:** ImageMagick (dark icon auto-generation)
 
 ### Tools & Methodologies
@@ -190,7 +190,7 @@ June 1–5, 2026:
 - Programme Guide with 30-day schedule
 - Recording scheduler
 
-### macOS Golden Gate (v27.2 — final)
+### macOS Golden Gate (v27.4.1 — final)
 - **Final shipping state.** No planned updates.
 - App_Version and version.json both at 27.2 (in sync)
 - OTA reports no update available
@@ -261,8 +261,8 @@ The code itself is the artifact. Vercel is the museum. GitHub is the archive. Br
 
 ## 📜 Changelog
 
-- **2026-06-17** — macOS Golden Gate v27.2 final. Tahoe officially expired. Golden Gate ships with Notification Center toasts + Glass.mp3, wallpaper upload, 126 dark/light icons, dock magnification, OTA update pipeline, Control Center appearance toggle that switches wallpaper + icons, liquid glass Apps overlay, zero build errors.
-- **2026-06-05 (v1.0.31)** — News LIVE expansion: India TV (141) + Republic Bharat (142). Entertainment tier added: 9XM Live (321) + Sony Kal HD LIVE (322). Total channels: 32 across 3 tiers (News, Kids, Entertainment). Full EPG with 4 daypart blocks live.
+- **2026-06-17** — macOS Golden Gate v27.4.1 final. Tahoe officially expired. Golden Gate ships with Notification Center toasts + Glass.mp3, wallpaper upload, 126 dark/light icons, dock magnification, OTA update pipeline, Control Center appearance toggle that switches wallpaper + icons, liquid glass Apps overlay, zero build errors.
+- **2026-06-05 (v1.0.32)** — News LIVE expansion: India TV (141) + Republic Bharat (142). Entertainment tier added: 9XM Live (321) + Sony Kal HD LIVE (322). Total channels: 32 across 3 tiers (News, Kids, Entertainment). Full EPG with 4 daypart blocks live.
 - **2026-06-04** — v1.0.27.5 ships with HDMI 4 recursive embedding. **This is when the stress test methodology was born.** HDMI 4 input loads macOS Tahoe as iframe; macOS can embed Samsung TV back, enabling infinite recursion. Recursive stress testing becomes possible.
 - **2026-06-04** — Initial v1.0.27.0 published. Samsung sim, macOS Tahoe, homepage all live. STRESS.md methodology documented. Recursion tested: 2 levels stable on 4 GB ChromeOS (swap thrashing at level 3).
 
@@ -270,14 +270,14 @@ The code itself is the artifact. Vercel is the museum. GitHub is the archive. Br
 
 ## 📜 Colophon
 
-**Built:** June 1–17, 2026  
-**Last updated:** June 17, 2026 (macOS Golden Gate v27.2 final)  
-**Location:** Kanpur, India  
-**Tools:** Claude + OpenCode, Vercel, GitHub, React 18 + Framer Motion, TypeScript  
+**Built:** June 1–17, 2026
+**Last updated:** June 17, 2026 (macOS Golden Gate v27.4.1 final)
+**Location:** Kanpur, India
+**Tools:** OpenCode + Antigravity CLI + Qoder (backup), Vercel, GitHub, React 19 + Framer Motion, TypeScript
 **Deployed:** https://aashman-homepage.vercel.app
 
-**Simulating:** 2010–2011 era broadcast systems + 2026-era operating system  
-**With:** 2026 technology  
+**Simulating:** 2010–2011 era broadcast systems + 2026-era operating system
+**With:** 2026 technology
 **Goal:** Preserve the boundary between broadcast and streaming eras — and prove a browser can be a full OS
 
 ---
