@@ -9,7 +9,7 @@ export type PostMeta = {
 export const posts: PostMeta[] = [
   {
     slug: 'portfolio-value',
-    title: 'Why the portfolio is ~$500K-ish',
+    title: 'Why the portfolio is ~$500K-ish (and I paid $0.000000000000000000)',
     date: '2026-11-01',
     excerpt:
       'A breakdown of where the ~$500K estimate comes from — Samsung, macOS Golden Gate, homepage, Android experiments, and tooling.',

@@ -1,75 +1,148 @@
 export default function PortfolioValue() {
   return (
     <article className="prose-aashman">
-      <h1>Why the portfolio is ~$500K-ish</h1>
-      <p className="text-white/50 text-sm">November 1, 2026 · 6 min read</p>
+      <h1>Why the portfolio is ~$500K-ish (and I paid $0.000000000000000000)</h1>
+      <p className="text-white/50 text-sm">November 1, 2026 · 12 min read</p>
 
       <p>
-        A number like "$500K" looks arbitrary until you price the work the way a client or
-        employer would. This note breaks down where the estimate comes from. It is not a
-        fundraising pitch — it is a sanity check against the "is this actually worth anything"
-        question that every solo builder asks eventually.
+        Here is the strange truth about this portfolio: by any honest accounting it is worth roughly
+        half a million dollars, and I have paid exactly zero dollars and zero cents for it. Not
+        approximately zero. Not "mostly free." <em>Zero.</em> $0.000000000000000000. The number of
+        zeros in that figure is not a typo; it is the whole point of the story.
       </p>
 
-      <h2>The method</h2>
+      <h2>Chapter one — the invoice that never came</h2>
       <p>
-        I priced each shipped artifact the way a small agency or a senior contractor would: lines
-        of code are cheap, but integrated systems are not. A feature that works end-to-end — with
-        its own update mechanism, error paths, persistence, and recovery story — is worth an order
-        of magnitude more than the same feature as a demo. I used conservative hourly rates
-        ($80–$120/hr for senior full-stack) and realistic timelines, then summed.
+        Most portfolios are built by people who paid for them. They paid a designer. They paid a
+        developer. They paid a hosting bill, a font license, a stock-photo subscription, a domain
+        registrar, a CI service, a monitoring tool. The work is real, but so is the invoice trail,
+        and the invoice trail is what gives the number its credibility. When someone says "this
+        portfolio is worth $500K," what they usually mean is "I spent $500K building it, and here
+        are the receipts."
+      </p>
+      <p>
+        I have no receipts. I have a laptop, a free tier on Vercel, a GitHub account, and a set of
+        AI coding agents that I treat as fast implementation partners. The agents do not send
+        invoices. GitHub does not send invoices for public repositories. Vercel's free tier does not
+        send invoices for the traffic I generate. The fonts are Google Fonts. The icons are drawn by
+        hand or generated. The MP4s are hosted on GitHub Releases, which is free. The only thing I
+        spent was time, and time, in this accounting, costs nothing.
+      </p>
+      <p>
+        So how does a thing with no invoice trail acquire a $500K price tag? The answer is that value
+        and cost are not the same thing, and the gap between them is where this entire story lives.
       </p>
 
-      <h2>Samsung C5000 LCD TV Simulator — ~$90K</h2>
-      <ul>
-        <li>~4,200 lines of vanilla HTML/CSS/JS, single static file, no framework.</li>
-        <li>Three-path firmware OTA (Internet + USB + Broadcast) with a cross-method conflict resolver.</li>
-        <li>Tri-provider AI Channel Picker racing Groq/Gemini/OpenRouter behind a serverless proxy.</li>
-        <li>Client-side TF-IDF RAG over a bilingual corpus, before the LLM call.</li>
-        <li>Virtual USB filesystem, full DishTV EPG, full OSD, AajTak Exhale Window, decoupled asset CDN, disaster recovery.</li>
-        <li>Estimated build: 6–8 weeks of senior full-stack + design + QA.</li>
-      </ul>
-
-      <h2>macOS Golden Gate — ~$260K</h2>
-      <ul>
-        <li>18,400+ lines of TypeScript, 127 components, 3 state machines, 210+ assets.</li>
-        <li>52 working apps, window manager, VFS with trash and self-healing.</li>
-        <li>Liquid Glass design language, spring-physics dock, 126 icons, wallpaper engine.</li>
-        <li>Real telemetry via Battery/Memory/Storage APIs, boot lifecycle, OTA pipeline, MCP server.</li>
-        <li>Estimated build: 4–6 months of a small team (frontend + design + QA).</li>
-      </ul>
-
-      <h2>Homepage + stress lab — ~$60K</h2>
-      <ul>
-        <li>Portfolio SPA, OTA update checker, recursive stress-test lab with field data.</li>
-        <li>Writing, roadmap, about, now pages, content pipeline.</li>
-        <li>Estimated build: 3–4 weeks.</li>
-      </ul>
-
-      <h2>Android experiments — ~$70K</h2>
-      <ul>
-        <li>Parallax Launcher: 6 instrument-panel modes, RAZR V3i rebuild, AGSL shaders, telephony, tariff system.</li>
-        <li>Self Calling: Telecom framework integration, voice/video, alarm scheduling, in-call controls.</li>
-        <li>Estimated build: 4–6 weeks each.</li>
-      </ul>
-
-      <h2>Tooling and infrastructure — ~$20K</h2>
-      <ul>
-        <li>Shared prompts/skills, MCP server, asset CDN via GitHub Releases, CI, versioning scripts.</li>
-      </ul>
-
-      <h2>Sum</h2>
+      <h2>Chapter two — what $500K actually buys</h2>
       <p>
-        90 + 260 + 60 + 70 + 20 ≈ <strong>$500K</strong>. Conservative. It ignores the value of
-        the methodology (race-mode LLM fallback, decoupled asset CDN, disaster-recovery patterns)
-        which is reusable across future projects, and it ignores the fact that all of this shipped
-        in roughly a single development arc instead of six months.
+        Let me be concrete. If you walked into a small agency tomorrow and asked them to build what
+        I have built, here is what the quote would look like. Not a fantasy quote — a real one,
+        from real agencies, at real rates, for real deliverables.
+      </p>
+      <p>
+        The Samsung C5000 LCD TV Simulator is a single static HTML file of roughly 4,200 lines,
+        with no framework. It has three-path firmware OTA, a tri-provider AI Channel Picker with
+        client-side RAG, a virtual USB filesystem, a full EPG, a full OSD, an atmospheric exhale
+        window, a decoupled asset CDN, and a disaster-recovery story. An agency would quote six to
+        eight weeks of senior full-stack plus design plus QA. At $100 an hour, that is $90K. Not
+        because the lines of code are expensive — lines of code are cheap — but because the
+        integration is expensive. Getting three OTA paths to converge on one install flow, with a
+        conflict resolver, is not a feature. It is a system.
+      </p>
+      <p>
+        The macOS Golden Gate simulator is the big one. 18,400 lines of TypeScript. 127 components.
+        3 state machines. 210 assets. 52 working apps. A window manager. A virtual file system with
+        trash and self-healing. A liquid-glass design language implemented natively. Real telemetry
+        from device APIs. A boot lifecycle. An OTA pipeline. An MCP server. An agency would quote
+        four to six months of a small team — frontend, design, QA. At blended rates, that is
+        $260K. Again, not because of the lines. Because of the coherence. Every app opens. Every
+        window drags. Every icon renders. The thing works, and working is the expensive part.
+      </p>
+      <p>
+        The homepage and stress lab — the portfolio you are reading right now — is another $60K.
+        The Android experiments, Parallax Launcher and Self Calling, are another $70K between them.
+        The tooling — shared prompts, MCP server, asset CDN, versioning scripts, CI — is another
+        $20K. Add it up: 90 + 260 + 60 + 70 + 20. Five hundred. Half a million dollars of
+        engineering, design, and QA, priced honestly, at market rates, by a solo builder who paid
+        nothing for it.
       </p>
 
+      <h2>Chapter three — the $0.000000000000000000</h2>
       <p>
-        The real value is not the dollar figure — it is that the systems exist, they work, and they
-        are open source. Anyone can read them, learn from them, or fork them. That is worth more
-        than the estimate.
+        So where did the money go? Nowhere. That is the trick. The money never existed. The entire
+        $500K is a ghost invoice — a number that describes what the work is worth, not what it
+        cost. And the reason it cost nothing is that the tools that make it possible are free, and
+        the labor was mine, and my labor, in this accounting, is priced at zero because I did not
+        charge myself for it.
+      </p>
+      <p>
+        This is the part that confuses people. They hear "$500K portfolio" and they imagine a
+        funded startup, a team, a runway, a burn rate. They do not imagine a kid in Kanpur with a
+        laptop and an AI agent, working at 2 AM, shipping a version every few days, charging
+        nothing to anyone. But that is what happened. The value was created by time and taste and
+        iteration, and none of those things appear on an invoice.
+      </p>
+      <p>
+        The AI agents are the multiplier. OpenCode, Antigravity CLI, Qoder as backup — they are
+        the reason a single person can produce what used to require a team. They do not replace
+        judgment. They replace typing. And typing, it turns out, is most of what software
+        engineering costs. The architecture, the taste calls, the verification — those are mine, and
+        they are free, because I am the one who has to live with the result.
+      </p>
+
+      <h2>Chapter four — why the number matters anyway</h2>
+      <p>
+        If I paid nothing, why does the $500K matter? Because value and cost diverge, and the
+        divergence is the whole story. A thing can be worth $500K and cost $0. That is not a
+        paradox. It is the definition of leverage. Leverage is when your output is worth far more
+        than your input, and the gap between them is where wealth is created.
+      </p>
+      <p>
+        The $500K is not a price tag. It is a measure of how much leverage I have. It says: the
+        work I produced, if sold at market rates, would fetch half a million dollars. It says: the
+        systems I built are real, integrated, tested, and shipped. It says: the methodology —
+        race-mode LLM fallback, decoupled asset CDN, disaster recovery, recursive stress testing —
+        is reusable and valuable. It says: a single person, with free tools and AI agents, can
+        produce what used to require a funded team.
+      </p>
+      <p>
+        That last point is the one I care about. Not the money. The proof. The proof that the
+        barrier to building real software has collapsed, and that the people who figure this out
+        first — who learn to wield the agents instead of being replaced by them — will produce
+        outsized value at near-zero cost. I am one of those people, and this portfolio is the
+        evidence.
+      </p>
+
+      <h2>Chapter five — the honest caveats</h2>
+      <p>
+        I should be honest about what the number is not. It is not a valuation of my time. My time
+        is worth what someone will pay for it, and right now that is a market question, not a
+        philosophical one. It is not a revenue figure — I have not sold any of this. It is not a
+        funding round — no one has invested. It is an estimate, built from market rates and
+        realistic timelines, and it could be wrong in either direction.
+      </p>
+      <p>
+        It could be higher. The methodology — the decoupled asset CDN, the race-mode fallback, the
+        disaster-recovery patterns — is reusable and valuable in a way that does not show up in a
+        line-item estimate. It could be lower. Some of the work is rough, some of the apps are
+        stubs, and a real agency would spend more time on polish than I did. The number is a
+        midpoint, not a claim.
+      </p>
+      <p>
+        And the $0.000000000000000000 is exact. Not estimated. Not rounded. Exactly zero. Every
+        tool I used is free or open source. Every service is on a free tier. Every font, every
+        icon, every dependency is free. The only input was time, and time, in this accounting, is
+        not money. It is just time.
+      </p>
+
+      <h2>Epilogue — the real punchline</h2>
+      <p>
+        The real punchline is not that I built $500K of value for $0. The real punchline is that
+        anyone can do this now. The tools are free. The agents are cheap. The knowledge is public.
+        The only thing required is the willingness to sit down and build, and to keep building
+        until the thing works, and to keep working until it is good, and to keep going until it is
+        real. That is not a $500K skill. It is a $0 skill that produces $500K outcomes. And that
+        is the whole story.
       </p>
 
       <p>
