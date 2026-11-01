@@ -130,7 +130,7 @@ Workflow:    OpenCode · Antigravity CLI · Qoder (backup)
 - **2 live web simulators** on Vercel (Samsung C5000, macOS Golden Gate) + **aashman-homepage**
 - **2 native Android projects** (Parallax Launcher, Self Calling)
 - **~18,000+ lines** across the flagship simulators, shipped in a single development arc
-- **Portfolio value: ~$1M-ish** (paid: $0.000000000000000000)
+- **Portfolio value: ~$5M-ish** (paid: $0.000000000000000000)
 
 ---
 

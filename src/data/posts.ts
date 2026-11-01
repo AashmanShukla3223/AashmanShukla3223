@@ -25,10 +25,10 @@ export const posts: PostMeta[] = [
   },
   {
     slug: 'portfolio-value',
-    title: 'Why the portfolio is ~$1M-ish (and I paid $0.000000000000000000)',
+    title: 'Why the portfolio is ~$5M-ish (and I paid $0.000000000000000000)',
     date: '2026-11-01',
     excerpt:
-      'A breakdown of where the ~$1M estimate comes from — Samsung, macOS Golden Gate, homepage, Android experiments, and tooling.',
+      'A breakdown of where the ~$5M estimate comes from — Samsung, macOS Golden Gate, homepage, Android experiments, and tooling.',
     tags: ['portfolio', 'valuation', 'meta'],
   },
   {

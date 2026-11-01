@@ -1,7 +1,7 @@
 export default function PortfolioValue() {
   return (
     <article className="prose-aashman">
-      <h1>Why the portfolio is ~$1M-ish (and I paid $0.000000000000000000)</h1>
+      <h1>Why the portfolio is ~$5M-ish (and I paid $0.000000000000000000)</h1>
       <p className="text-white/50 text-sm">November 1, 2026 · 12 min read</p>
 
       <p>
@@ -17,7 +17,7 @@ export default function PortfolioValue() {
         developer. They paid a hosting bill, a font license, a stock-photo subscription, a domain
         registrar, a CI service, a monitoring tool. The work is real, but so is the invoice trail,
         and the invoice trail is what gives the number its credibility. When someone says "this
-        portfolio is worth $1M," what they usually mean is "I spent $1M building it, and here
+        portfolio is worth $5M," what they usually mean is "I spent $5M building it, and here
         are the receipts."
       </p>
       <p>
@@ -29,11 +29,11 @@ export default function PortfolioValue() {
         spent was time, and time, in this accounting, costs nothing.
       </p>
       <p>
-        So how does a thing with no invoice trail acquire a $1M price tag? The answer is that value
+        So how does a thing with no invoice trail acquire a $5M price tag? The answer is that value
         and cost are not the same thing, and the gap between them is where this entire story lives.
       </p>
 
-      <h2>Chapter two — what $1M actually buys</h2>
+      <h2>Chapter two — what $5M actually buys</h2>
       <p>
         Let me be concrete. If you walked into a small agency tomorrow and asked them to build what
         I have built, here is what the quote would look like. Not a fantasy quote — a real one,
@@ -44,7 +44,7 @@ export default function PortfolioValue() {
         with no framework. It has three-path firmware OTA, a tri-provider AI Channel Picker with
         client-side RAG, a virtual USB filesystem, a full EPG, a full OSD, an atmospheric exhale
         window, a decoupled asset CDN, and a disaster-recovery story. An agency would quote six to
-        eight weeks of senior full-stack plus design plus QA. At $200 an hour, that is $180K. Not
+        eight weeks of senior full-stack plus design plus QA. At $1000 an hour, that is $900K. Not
         because the lines of code are expensive — lines of code are cheap — but because the
         integration is expensive. Getting three OTA paths to converge on one install flow, with a
         conflict resolver, is not a feature. It is a system.
@@ -55,14 +55,14 @@ export default function PortfolioValue() {
         trash and self-healing. A liquid-glass design language implemented natively. Real telemetry
         from device APIs. A boot lifecycle. An OTA pipeline. An MCP server. An agency would quote
         four to six months of a small team — frontend, design, QA. At blended rates, that is
-        $520K. Again, not because of the lines. Because of the coherence. Every app opens. Every
+        $2.6M. Again, not because of the lines. Because of the coherence. Every app opens. Every
         window drags. Every icon renders. The thing works, and working is the expensive part.
       </p>
       <p>
-        The homepage and stress lab — the portfolio you are reading right now — is another $120K.
-        The Android experiments, Parallax Launcher and Self Calling, are another $140K between them.
+        The homepage and stress lab — the portfolio you are reading right now — is another $600K.
+        The Android experiments, Parallax Launcher and Self Calling, are another $700K between them.
         The tooling — shared prompts, MCP server, asset CDN, versioning scripts, CI — is another
-        $40K. Add it up: 180 + 520 + 120 + 140 + 40. One million dollars of
+        $200K. Add it up: 900 + 2600 + 600 + 700 + 200. Five million dollars of
         engineering, design, and QA, priced honestly, at market rates, by a solo builder who paid
         nothing for it.
       </p>
@@ -70,13 +70,13 @@ export default function PortfolioValue() {
       <h2>Chapter three — the $0.000000000000000000</h2>
       <p>
         So where did the money go? Nowhere. That is the trick. The money never existed. The entire
-        $1M is a ghost invoice — a number that describes what the work is worth, not what it
+        $5M is a ghost invoice — a number that describes what the work is worth, not what it
         cost. And the reason it cost nothing is that the tools that make it possible are free, and
         the labor was mine, and my labor, in this accounting, is priced at zero because I did not
         charge myself for it.
       </p>
       <p>
-        This is the part that confuses people. They hear "$1M portfolio" and they imagine a
+        This is the part that confuses people. They hear "$5M portfolio" and they imagine a
         funded startup, a team, a runway, a burn rate. They do not imagine a kid in Kanpur with a
         laptop and an AI agent, working at 2 AM, shipping a version every few days, charging
         nothing to anyone. But that is what happened. The value was created by time and taste and
@@ -92,13 +92,13 @@ export default function PortfolioValue() {
 
       <h2>Chapter four — why the number matters anyway</h2>
       <p>
-        If I paid nothing, why does the $1M matter? Because value and cost diverge, and the
-        divergence is the whole story. A thing can be worth $1M and cost $0. That is not a
+        If I paid nothing, why does the $5M matter? Because value and cost diverge, and the
+        divergence is the whole story. A thing can be worth $5M and cost $0. That is not a
         paradox. It is the definition of leverage. Leverage is when your output is worth far more
         than your input, and the gap between them is where wealth is created.
       </p>
       <p>
-        The $1M is not a price tag. It is a measure of how much leverage I have. It says: the
+        The $5M is not a price tag. It is a measure of how much leverage I have. It says: the
         work I produced, if sold at market rates, would fetch half a million dollars. It says: the
         systems I built are real, integrated, tested, and shipped. It says: the methodology —
         race-mode LLM fallback, decoupled asset CDN, disaster recovery, recursive stress testing —
@@ -137,11 +137,11 @@ export default function PortfolioValue() {
 
       <h2>Epilogue — the real punchline</h2>
       <p>
-        The real punchline is not that I built $1M of value for $0. The real punchline is that
+        The real punchline is not that I built $5M of value for $0. The real punchline is that
         anyone can do this now. The tools are free. The agents are cheap. The knowledge is public.
         The only thing required is the willingness to sit down and build, and to keep building
         until the thing works, and to keep working until it is good, and to keep going until it is
-        real. That is not a $1M skill. It is a $0 skill that produces $1M outcomes. And that
+        real. That is not a $5M skill. It is a $0 skill that produces $5M outcomes. And that
         is the whole story.
       </p>
 
