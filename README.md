@@ -83,7 +83,7 @@ The toolkit repo behind both simulators — it also hosts the macOS Golden Gate 
 
 ### 📲 [Parallax Launcher](https://github.com/AashmanShukla3223/Parallax-Launcher)
 
-An enthusiast **Android launcher** built with Jetpack Compose, featuring distinct, tactile instrument-panel home screens — Industrial Rig, Celestial OrbitOS, Swiss Broadsheet, Cyberdeck HUD, Cinecam Rangefinder, and a pixel-exact **Motorola RAZR V3i clamshell** rebuild (Mode 7) with working flip hinge, etched keypad, and real telephony. AGSL shaders, sensor telemetry, and 6 accent themes. Beta testing open — see `TESTING.md`.
+An enthusiast **Android launcher** built with Jetpack Compose, featuring distinct, tactile instrument-panel home screens — Industrial Rig, Celestial OrbitOS, Swiss Broadsheet, Cyberdeck HUD, Cinecam Rangefinder, and a pixel-exact **Motorola RAZR V3i clamshell** rebuild (Mode 7) with working flip hinge, etched keypad, and real telephony. AGSL shaders, sensor telemetry, and 6 accent themes. Supports Android 7+. Beta testing open — see `TESTING.md`.
 
 > **Tech**: Kotlin · Jetpack Compose · Material 3 · AGSL · CameraX · Sensors
 
@@ -114,7 +114,7 @@ A few principles that show up across my projects:
 ```
 Languages:   JavaScript · TypeScript · Kotlin · Java · HTML · CSS · Bash · Python
 Frameworks:  React 19 · Vite · Framer Motion · Tailwind v4 · Jetpack Compose · Material 3
-Runtime:     Node.js · Vercel Serverless · Vercel Edge · Android (minSdk 23+)
+Runtime:     Node.js · Vercel Serverless · Vercel Edge · Android (Parallax 7+, Self Calling 6+)
 AI:          Google Gemini · Groq (Llama 3.3 70B) · OpenRouter (DeepSeek R1)
 Patterns:    Client-side RAG · TF-IDF retrieval · Multi-path OTA · Race-mode
              fallback · Web Audio synthesis · HLS live streaming · Telecom self-calls

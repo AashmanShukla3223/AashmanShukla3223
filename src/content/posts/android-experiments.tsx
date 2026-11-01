@@ -60,7 +60,7 @@ export default function AndroidExperiments() {
       <p>
         Six global accent colors, four background schemes, four font families, and per-style
         tunables — detent angles, gravity constants, orbit node caps, aspect ratios, framing grids,
-        CRT toggles. Targets minSdk 27 (Android 8.1) through targetSdk 37, with AGSL shaders and
+        CRT toggles. Supports Android 7+ (targetSdk 37), with AGSL shaders and
         backward-compatible Compose renderers for older devices. CI runs on every push via GitHub
         Actions.
       </p>
@@ -91,7 +91,7 @@ export default function AndroidExperiments() {
       </ul>
       <h3>Android 6 through 17</h3>
       <p>
-        Targets Android 6.0+ (minSdk 23) up to Android 17 (targetSdk 37), with edge-to-edge handling
+        Supports down to Android 6 (minSdk 23) up to Android 17 (targetSdk 37), with edge-to-edge handling
         on Android 15+, runtime permission flows, and Telecom account registration that re-registers
         fresh when the account kind changes. Tested on a Pixel (API 37) and a Galaxy Nexus (API 23).
       </p>
