@@ -8,6 +8,14 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: 'v1-0-10',
+    title: 'v1.0.10: one story, every project, and what comes next',
+    date: '2026-11-01',
+    excerpt:
+      'A novel-length note combining every project — Samsung, macOS Golden Gate, Parallax, Self Calling, homepage — and introducing the new features coming to each.',
+    tags: ['release-notes', 'roadmap', 'meta'],
+  },
+  {
     slug: 'v1-0-9',
     title: 'v1.0.9: the homepage keeps growing',
     date: '2026-11-01',
