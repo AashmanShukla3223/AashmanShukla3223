@@ -138,6 +138,7 @@ Workflow:    OpenCode · Antigravity CLI · Qoder (backup)
 - 🌐 **Live work**: [samsung-lcd-tv.vercel.app](https://samsung-lcd-tv.vercel.app) · [macos-27-golden-gate.vercel.app](https://macos-27-golden-gate.vercel.app) · [aashman-homepage.vercel.app](https://aashman-homepage.vercel.app)
 - 🐦 **Twitter / X**: [@AashamnS49638](https://twitter.com/AashamnS49638)
 - 📧 **Email**: aashmanshukla323@gmail.com
+- 🐛 **Issues / bugs**: [Open an issue on GitHub](https://github.com/AashmanShukla3223/AashmanShukla3223/issues) — open to any issues or bugs through GitHub
 
 ---
 
