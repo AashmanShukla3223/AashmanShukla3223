@@ -1,6 +1,7 @@
 const items = [
   ['Building', 'Samsung C5000 v1.0.32 polish (Custom Picture Mode) and Parallax Launcher’s RAZR V3i mode — fewer surfaces, more feeling.'],
   ['Shipping', 'macOS Golden Gate v27.4.1 with 52 apps, Dynamic Island, real telemetry, and an MCP server.'],
+  ['Shipping', 'Android: Parallax Launcher (RAZR V3i mode) and Self Calling (Telecom self-calls, video, Hold/Mute).'],
   ['Exploring', 'Android Telecom + Compose experiments: Parallax Launcher and Self Calling.'],
   ['Learning', 'How to make browser and native interfaces that feel physical without becoming nostalgic wallpaper.'],
   ['Looking for', 'A small, thoughtful collaboration where the details matter.'],

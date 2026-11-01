@@ -8,6 +8,14 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: 'android-experiments',
+    title: 'Android experiments: Parallax Launcher and Self Calling',
+    date: '2026-11-01',
+    excerpt:
+      'Two native Android projects — a tactile launcher with a RAZR V3i mode, and a Telecom self-call app that rings on the real native dialer.',
+    tags: ['android', 'parallax-launcher', 'self-calling'],
+  },
+  {
     slug: 'current-builds',
     title: 'Current builds: Samsung v1.0.32 and macOS Golden Gate v27.4.1',
     date: '2026-11-01',

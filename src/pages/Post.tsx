@@ -4,6 +4,7 @@ import { posts } from '../data/posts';
 
 // Lazy-load each post by slug
 const postLoaders: Record<string, () => Promise<{ default: React.ComponentType }>> = {
+  'android-experiments': () => import('../content/posts/android-experiments'),
   'current-builds': () => import('../content/posts/current-builds'),
   'shipping-v1-0-31': () => import('../content/posts/shipping-v1-0-27'),
   'quality-weighted-followers': () => import('../content/posts/quality-weighted-followers'),
