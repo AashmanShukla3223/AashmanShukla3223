@@ -8,12 +8,12 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
-    slug: 'shipping-v1-1-9',
-    title: 'Shipping v1.1.9: the homepage grows up',
+    slug: 'v1-0-9',
+    title: 'v1.0.9: the homepage keeps growing',
     date: '2026-11-01',
     excerpt:
-      'Release notes for homepage v1.1.9 — project cards, notes overhaul, Now/Lab/Roadmap/About updates, and the lessons from stale facts.',
-    tags: ['homepage', 'release-notes', 'v1.1.9'],
+      'Small release. The homepage is now at v1.0.9 — project cards, notes, About, stress lab, and roadmap all refreshed.',
+    tags: ['release-notes', 'homepage'],
   },
   {
     slug: 'portfolio-value',
