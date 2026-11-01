@@ -1,7 +1,7 @@
 export default function PortfolioValue() {
   return (
     <article className="prose-aashman">
-      <h1>Why the portfolio is ~$500K-ish (and I paid $0.000000000000000000)</h1>
+      <h1>Why the portfolio is ~$1M-ish (and I paid $0.000000000000000000)</h1>
       <p className="text-white/50 text-sm">November 1, 2026 · 12 min read</p>
 
       <p>
@@ -17,7 +17,7 @@ export default function PortfolioValue() {
         developer. They paid a hosting bill, a font license, a stock-photo subscription, a domain
         registrar, a CI service, a monitoring tool. The work is real, but so is the invoice trail,
         and the invoice trail is what gives the number its credibility. When someone says "this
-        portfolio is worth $500K," what they usually mean is "I spent $500K building it, and here
+        portfolio is worth $1M," what they usually mean is "I spent $1M building it, and here
         are the receipts."
       </p>
       <p>
@@ -29,11 +29,11 @@ export default function PortfolioValue() {
         spent was time, and time, in this accounting, costs nothing.
       </p>
       <p>
-        So how does a thing with no invoice trail acquire a $500K price tag? The answer is that value
+        So how does a thing with no invoice trail acquire a $1M price tag? The answer is that value
         and cost are not the same thing, and the gap between them is where this entire story lives.
       </p>
 
-      <h2>Chapter two — what $500K actually buys</h2>
+      <h2>Chapter two — what $1M actually buys</h2>
       <p>
         Let me be concrete. If you walked into a small agency tomorrow and asked them to build what
         I have built, here is what the quote would look like. Not a fantasy quote — a real one,
@@ -70,13 +70,13 @@ export default function PortfolioValue() {
       <h2>Chapter three — the $0.000000000000000000</h2>
       <p>
         So where did the money go? Nowhere. That is the trick. The money never existed. The entire
-        $500K is a ghost invoice — a number that describes what the work is worth, not what it
+        $1M is a ghost invoice — a number that describes what the work is worth, not what it
         cost. And the reason it cost nothing is that the tools that make it possible are free, and
         the labor was mine, and my labor, in this accounting, is priced at zero because I did not
         charge myself for it.
       </p>
       <p>
-        This is the part that confuses people. They hear "$500K portfolio" and they imagine a
+        This is the part that confuses people. They hear "$1M portfolio" and they imagine a
         funded startup, a team, a runway, a burn rate. They do not imagine a kid in Kanpur with a
         laptop and an AI agent, working at 2 AM, shipping a version every few days, charging
         nothing to anyone. But that is what happened. The value was created by time and taste and
@@ -92,13 +92,13 @@ export default function PortfolioValue() {
 
       <h2>Chapter four — why the number matters anyway</h2>
       <p>
-        If I paid nothing, why does the $500K matter? Because value and cost diverge, and the
-        divergence is the whole story. A thing can be worth $500K and cost $0. That is not a
+        If I paid nothing, why does the $1M matter? Because value and cost diverge, and the
+        divergence is the whole story. A thing can be worth $1M and cost $0. That is not a
         paradox. It is the definition of leverage. Leverage is when your output is worth far more
         than your input, and the gap between them is where wealth is created.
       </p>
       <p>
-        The $500K is not a price tag. It is a measure of how much leverage I have. It says: the
+        The $1M is not a price tag. It is a measure of how much leverage I have. It says: the
         work I produced, if sold at market rates, would fetch half a million dollars. It says: the
         systems I built are real, integrated, tested, and shipped. It says: the methodology —
         race-mode LLM fallback, decoupled asset CDN, disaster recovery, recursive stress testing —
@@ -137,11 +137,11 @@ export default function PortfolioValue() {
 
       <h2>Epilogue — the real punchline</h2>
       <p>
-        The real punchline is not that I built $500K of value for $0. The real punchline is that
+        The real punchline is not that I built $1M of value for $0. The real punchline is that
         anyone can do this now. The tools are free. The agents are cheap. The knowledge is public.
         The only thing required is the willingness to sit down and build, and to keep building
         until the thing works, and to keep working until it is good, and to keep going until it is
-        real. That is not a $500K skill. It is a $0 skill that produces $500K outcomes. And that
+        real. That is not a $1M skill. It is a $0 skill that produces $1M outcomes. And that
         is the whole story.
       </p>
 
