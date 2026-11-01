@@ -8,6 +8,14 @@ export type PostMeta = {
 
 export const posts: PostMeta[] = [
   {
+    slug: 'android-life-story',
+    title: 'The Android projects: a life story',
+    date: '2026-11-01',
+    excerpt:
+      'Why Parallax Launcher exists (I wanted the best RAZR V3i) and why Self Calling exists (no ads, seamless prank calls to every contact). A life story.',
+    tags: ['android', 'parallax-launcher', 'self-calling', 'essay'],
+  },
+  {
     slug: 'android-experiments',
     title: 'Android experiments: Parallax Launcher and Self Calling',
     date: '2026-11-01',
