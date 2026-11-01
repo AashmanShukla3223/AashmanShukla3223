@@ -93,7 +93,7 @@ export default function AndroidExperiments() {
       <p>
         Supports down to Android 6 (minSdk 23) up to Android 17 (targetSdk 37), with edge-to-edge handling
         on Android 15+, runtime permission flows, and Telecom account registration that re-registers
-        fresh when the account kind changes. Tested on a Pixel (API 37) and a Galaxy Nexus (API 23).
+        fresh when the account kind changes. Tested on a Pixel (API 37), a Galaxy Nexus (API 23), and a Samsung SM-J700F (Galaxy J7).
       </p>
 
       <h2>Shared principles</h2>

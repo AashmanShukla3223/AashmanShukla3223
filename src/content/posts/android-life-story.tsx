@@ -197,8 +197,8 @@ export default function AndroidLifeStory() {
       <h2>Part seven — where they stand</h2>
       <p>
         Parallax Launcher supports Android 7+ and is in beta testing. Self Calling supports down to
-        Android 6, up to Android 17, and is verified on a Pixel (API 37) and a Galaxy Nexus (API
-        23). Both are open source, both are free, both have no ads — Self Calling specifically
+        Android 6, up to Android 17, and is verified on a Pixel (API 37), a Galaxy Nexus (API 23),
+        and a Samsung SM-J700F (Galaxy J7). Both are open source, both are free, both have no ads — Self Calling specifically
         because ads were the entire reason it exists.
       </p>
       <p>

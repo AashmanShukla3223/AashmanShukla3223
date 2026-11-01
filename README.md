@@ -89,7 +89,7 @@ An enthusiast **Android launcher** built with Jetpack Compose, featuring distinc
 
 ### 📞 [Self Calling](https://github.com/AashmanShukla3223/self-calling)
 
-An **Android app** that places self-calls through the Telecom framework so ringing, connected, and ended states render on the **real native dialer UI**. Mic loopback, per-identity voice presets, video calls, in-call Hold/Mute/Speaker controls, alarm-based incoming-call scheduling, and a self-call log. Targets Android 6.0+ up to Android 17.
+An **Android app** that places self-calls through the Telecom framework so ringing, connected, and ended states render on the **real native dialer UI**. Mic loopback, per-identity voice presets, video calls, in-call Hold/Mute/Speaker controls, alarm-based incoming-call scheduling, and a self-call log. Targets Android 6.0+ up to Android 17. Tested on a Pixel (API 37), a Galaxy Nexus (API 23), and a Samsung SM-J700F (Galaxy J7).
 
 > **Tech**: Kotlin · Java · Telecom/ConnectionService · AudioRecord/AudioTrack · Camera2
 
